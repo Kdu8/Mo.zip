@@ -26,7 +26,7 @@ export default function Signpage() {
     const nickname = e.target.nickname.value;
     const tag = e.target.tag.value;
 
-    await axios.post(SERVER_URL, { name, email, nickname, tag }).then((res)=>{
+    await axios.post(SERVER_URL, { name, email, nickname, tag }, { withCredentials: true }).then((res)=>{
       console.log(res.data);
       replace(`/check`);
     }).catch(alert("빈창을 입력해주세요."));

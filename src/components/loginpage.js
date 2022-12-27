@@ -14,7 +14,7 @@ function Logpage() {
     e.preventDefault();
     const email = e.target.email.value;
 
-    await axios.post(SERVER_URL, { email }).then((res)=>{
+    await axios.post(SERVER_URL, { email }, { withCredentials: true }).then((res)=>{
       console.log(res.data);
       replace(`/check`);
     }).catch(alert("이메일을 입력해주세요."));
