@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+.body {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 550;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.사람1 .사람2 .사람3 .image {
+  display: block;
+}
+
+.inner {
+  width: 1450px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* BTN */
+
+.start {
+  padding: 13px 30px;
+  background-color: #7ea0e5;
+  border: 2px solid #7ea0e5;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 550;
+  font-size: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: block;
+  transition: 0.4s;
+  color: #fff;
+}
+
+.start:hover {
+  background-color: #fff;
+  color: #7ea0e5;
+  border: 3px solid #7ea0e5;
+  font-weight: 600;
+}
+
+.condition {
+  background-color: #91aeea;
+  border-radius: 20px;
+  padding: 7px 3px;
+  width: 100px;
+  text-align: center;
+  font-size: 17px;
+  margin: 10px 10px 2px 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HEADER */
+.header {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0.5px solid #000;
+  z-index: 9;
+  position: sticky;
+  height: 110px;
+}
+
+.header .inner .logo {
+  height: 40px;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+}
+
+.header .inner .join {
+  position: absolute;
+  display: flex;
+  top: 43px;
+  right: 10px;
+  font-weight: 600;
+}
+.header .inner .join .longin {
+  position: relative;
+  cursor: pointer;
+}
+
+.header .inner .join .login::after {
+  content: "";
+  width: 1px;
+  height: 15px;
+  position: absolute;
+  top: 5px;
+  margin-left: 10px;
+  background-color: #000;
+}
+
+.header .inner .join .signup {
+  margin-left: 22px;
+  cursor: pointer;
+}
+
+.visual {
+  top: 0px;
+}
+
+.visual .box1 {
+  position: relative;
+  top: 0px;
+  height: 800px;
+}
+
+.visual .box1 > .inner {
+  height: 800px;
+  position: relative;
+}
+.visual .box1 .inner .contents1 {
+  position: absolute;
+  top: 180px;
+  height: 400px;
+  left: 60px;
+}
+.visual .box1 .inner .contents1 .title {
+  font-size: 90px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.visual .box1 .inner .contents1 .explanation {
+  margin-bottom: 45px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.visual .box1 .inner .image {
+  height: 340px;
+  position: absolute;
+  top: 220px;
+  left: 850px;
+}
+
+.box2 {
+  position: relative;
+  background-color: #d7e3fb;
+  height: 600px;
+  width: 1920px;
+}
+
+.box2 .inner {
+  width: 850px;
+  position: absolute;
+  top: 180px;
+  left: 350px;
+  text-align: center;
+}
+
+.box2 .inner .contents2 {
+  display: block;
+  font-size: 80px;
+  font-weight: 600;
+  color: #000;
+}
+
+.box3 {
+  position: relative;
+  height: 1800px;
+}
+
+.box3 .inner {
+  height: 2200px;
+  position: absolute;
+  left: 250px;
+  top: 210px;
+  bottom: 210px;
+}
+
+.box3 .inner .partner1,
+.box3 .inner .partner2,
+.box3 .inner .partner3 {
+  height: 300px;
+  position: relative;
+  margin-bottom: 210px;
+}
+
+.box3 .inner .partner1 .run,
+.box3 .inner .partner2 .develop,
+.box3 .inner .partner3 .box {
+  display: inline;
+  height: 300px;
+  margin-left: 200px;
+}
+
+.box3 .inner .partner1 .runh2,
+.box3 .inner .partner2 .developh2,
+.box3 .inner .partner3 .boxh2 {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 600px;
+  font-size: 50px;
+  font-weight: 700;
+}
+.box3 .inner .partner1 .runp,
+.box3 .inner .partner2 .developp,
+.box3 .inner .partner3 .boxp {
+  width: 350px;
+  display: inline;
+  position: absolute;
+  top: 120px;
+  left: 600px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 45px;
+}
+
+.box4 {
+  background-color: #d7e3fb;
+  height: 450px;
+}
+
+.box4 .inner .contents3 {
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 170px;
+}
+
+.box5 {
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.box5 .inner .ex1,
+.box5 .inner .ex2,
+.box5 .inner .ex3 {
+  position: relative;
+  height: 500px;
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+
+.box5 .inner .ex1 .사람1,
+.box5 .inner .ex2 .사람2,
+.box5 .inner .ex3 .사람3 {
+  height: 300px;
+  display: inline;
+  position: absolute;
+  top: 80px;
+  left: 180px;
+}
+
+.box5 .inner .ex1 .card1,
+.box5 .inner .ex2 .card2,
+.box5 .inner .ex3 .card3 {
+  background-color: #d7e3fb;
+  width: 650px;
+  height: 300px;
+  border-radius: 25px;
+  position: absolute;
+  top: 110px;
+  right: 230px;
+  box-shadow: 10px 10px 17px 7px #ebebee;
+}
+
+.box5 .inner .ex1 .card1 .text1 {
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 34px;
+  margin-left: 60px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 18px;
+  width: 500px;
+}
+
+.box5 .inner .ex2 .card2 .text2,
+.box5 .inner .ex3 .card3 .text3 {
+  font-weight: 400;
+  font-size: 25px;
+  margin-top: 70px;
+  margin-left: 60px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 18px;
+  width: 500px;
+}
+
+.box5 .inner .ex1 .card1 .cardtext1 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 60px;
+  margin-top: 15px;
+}
+.box5 .inner .ex2 .card2 .cardtext2,
+.box5 .inner .ex3 .card3 .cardtext3 {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 60px;
+  margin-top: 23px;
+}
+
+.box6 {
+  background-color: #fafafb;
+  position: relative;
+  height: 270px;
+}
+
+.box6 .inner .findtext {
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 260px;
+}
+
+.visual .box7 {
+  background-color: #FAFAFB;
+  height: 650px;
+}
+
+.visual .box7 .inner .desktop {
+  height: 500px;
+  position: absolute;
+  left: 206px;
+  top: 10px;
+}
+
+.visual .box7 .inner .macbook {
+  height: 450px;
+  position: absolute;
+  top: 110px;
+  left: 706px;
+}

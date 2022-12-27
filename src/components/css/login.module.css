@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+.body {
+  background-color: #f1f1f2;
+  width: 100vw;
+  height: 100vh;
+}
+.logo {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  transform: translate(80%, 105%);
+}
+.container {
+  width: 450px;
+  height: 550px;
+  border-radius: 7px;
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  background-color: #ffffff;
+  transform: translate(-50%, -57.5%);
+  box-shadow: 0px 0px 5px 2px #00000034;
+}
+
+.easy {
+  font-size: 30px;
+  font-weight: Bold;
+  position: absolute;
+  transform: translate(40%, 350%);
+}
+.one {
+  font-size: 16px;
+  position: absolute;
+  font-weight: normal;
+  transform: translate(32%, 900%);
+  color: #858282;
+}
+.getEmail {
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(20%, 550%);
+  padding-left: 20px;
+}
+.getEmail:focus {
+  outline: none;
+}
+.getEmail::placeholder {
+  color: #b8b1b1;
+  font-size: 14px;
+  font-weight: normal;
+  transform: translate(-1%, 5%);
+}
+.correct{
+  font-size: 12px;
+  color: red;
+  position: inherit;
+  transform: translate(15%, 1950%);
+}
+.submit {
+  font-weight: Bold;
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  border: none;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #7EA0E5;
+  transform: translate(20%, 800%);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px #6078a988;
+}
+.submit:hover{
+  border: 3px solid #7EA0E5;
+  background-color: white;
+  color: #7EA0E5;
+  transform: 0.4s;
+}
+.submit:focus{
+  outline: none;
+}
+.not {
+  color: #858585;
+  font-size: 13px;
+  position: none;
+  font-weight: normal;
+  transform: translate(25%, 2600%);
+}
+.join {
+  color: #7ea0e5;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: normal;
+  position: absolute;
+  transform: translate(500%, 2500%);
+}

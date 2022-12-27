@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.logo {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  transform: translate(80%, 105%);
+}
+.body{
+  background-color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 450px;
+  height: 550px;
+  border-radius: 7px;
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  background-color: #ffffff;
+  transform: translate(-50%, -57.5%);
+  box-shadow: 0px 0px 5px 2px #00000034;
+}
+.check {
+    font-size: 34px;
+    font-weight: Bold;
+    position: absolute;
+    transform: translate(70%, 340%);
+  }
+.checknum {
+  font-size: 30px;
+  font-weight: Bold;
+  position: absolute;
+  transform: translate(52%, 350%);
+}
+.getchecknum{
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(20%, 550%);
+  padding-left: 20px;
+}
+.getchecknum:focus{
+    outline: none;
+}
+.getchecknum::placeholder {
+  color: #b8b1b1;
+  font-size: 14px;
+  font-weight: Medium;
+  transform: translate(-1%, 5%);
+}
+.submit{
+  font-weight: Bold;
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  border: none;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #7EA0E5;
+  transform: translate(20%, 800%);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px #6078a988;
+}
+.submit:hover{
+  border: 3px solid #7EA0E5;
+  background-color: white;
+  color: #7EA0E5;
+  transform: 0.4s;
+}
+.correct1{
+  font-size: 12px;
+  color: red;
+  position: inherit;
+  transform: translate(8%, 2460%);
+}
+.one {
+  font-size: 16px;
+  position: absolute;
+  font-weight: Medium;
+  transform: translate(32%, 900%);
+  color: #858282;
+}

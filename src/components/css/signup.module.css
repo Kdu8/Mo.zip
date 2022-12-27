@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.logo {
+  position: absolute;
+  width: 170px;
+  height: 50px;
+  transform: translate(83%, 105%);
+}
+.body{
+  background-color: #f1f1f1;
+  width: 100vw;
+  height: 100vh;
+}
+.container {
+  width: 450px;
+  height: 550px;
+  border-radius: 7px;
+  position: absolute;
+  left: 50%;
+  top: 57%;
+  background-color: #ffffff;
+  transform: translate(-50%, -57.5%);
+  box-shadow: 0px 0px 5px 2px #00000034;
+}
+.correct1{
+  font-size: 12px;
+  color: red;
+  position: inherit;
+  transform: translate(14%, 1440%);
+}
+.correct2{
+  font-size: 12px;
+  color: red;
+  position: inherit;
+  transform: translate(14%, 1900%);
+}
+.input1{
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(17%, 300%);
+  padding-left: 20px;
+}
+.input2{
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(17%, 440%);
+  padding-left: 20px;
+}
+.input1:focus{
+    outline: none;
+}
+.input1::placeholder {
+  color: #b8b1b1;
+  font-size: 14px;
+  font-weight: Medium;
+  transform: translate(-1%, 5%);
+}
+.input2:focus{
+  outline: none;
+}
+.input2::placeholder {
+color: #b8b1b1;
+font-size: 14px;
+font-weight: Medium;
+transform: translate(-1%, 5%);
+}
+.nickname{
+  width: 190px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(30%, 580%);
+  padding-left: 20px;
+}
+.nickname::placeholder{
+  color: #b8b1b1;
+  font-size: 14px;
+  font-weight: Medium;
+  transform: translate(-5%, 5%);
+}
+.tag{
+  width: 130px;
+  height: 50px;
+  border-radius: 5px;
+  border: 0.3px solid #aaaaaa;
+  position: absolute;
+  transform: translate(197%, 580%);
+  padding-left: 20px;
+}
+.submit{
+  font-weight: Bold;
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  border: none;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #7EA0E5;
+  transform: translate(17%, 800%);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px #6078a988;
+}
+.submit:hover{
+  border: 3px solid #7EA0E5;
+  background-color: white;
+  color: #7EA0E5;
+  transform: 0.4s;
+}
+.submit:focus{
+  outline: none;
+}
+.agree{
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: Medium;
+  color: black;
+  position: absolute;
+  transform: translate(30%, 2050%);
+}
+.agreebox{
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  transform: translate(400%, 2420%);
+}
+.errormessage1{
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  transform: translate(130%, 2890%);
+}
