@@ -1,9 +1,7 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import check from "./css/check.module.css";
 import logo from "./img/logo.png";
 import axios from "axios";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL =
@@ -11,13 +9,6 @@ const SERVER_URL =
 
 function Checkpage() {
   const {replace} = useNavigate();
-  const [checkcode, setCheckcode] = useState(null);
-
-  const fetchData = async () => {
-    const response = await axios.get(SERVER_URL);
-    setCheckcode(response.data);
-  };
-
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const verifyCode = e.target.verifyCode.value;
@@ -25,6 +16,7 @@ function Checkpage() {
     console.log({verifyCode});
     await axios.post(SERVER_URL, { verifyCode }, { withCredentials: true }).then((response) => {
       console.log(response);
+      replace(`/main`);
     });
   };
   return (

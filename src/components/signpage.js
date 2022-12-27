@@ -2,7 +2,6 @@
 import React from "react";
 import signup from "./css/signup.module.css";
 import logo from "./img/logo.png";
-import {useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -18,8 +17,6 @@ export default function Signpage() {
   // const onSubmitcheck = (data) => {
   //   console.log("data", data);
   // };
-
-  const [user, setUser] = useState(null);
   const replace = useNavigate();
 
   const onSubmitHandler = async (e) => {
