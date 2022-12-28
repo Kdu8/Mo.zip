@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 const SERVER_URL =
-  "http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
+  "https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
 export default function Signpage() {
   const { replace } = useNavigate();
 

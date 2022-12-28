@@ -5,7 +5,7 @@ import logo from "./img/logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SERVER_URL = 'http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailVerify';
+const SERVER_URL = 'https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailVerify';
 
 function Logpage() {
   const {replace} = useNavigate();

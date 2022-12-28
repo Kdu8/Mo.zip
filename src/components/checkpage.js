@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL =
-  "http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailConfirm";
+  "https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailConfirm";
 
 function Checkpage() {
   const {replace} = useNavigate();

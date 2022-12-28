@@ -18,7 +18,9 @@ function Mainpage() {
   return (
     <div className={main.main}>
       <Mainheader />
-      
+      <Link to={`/write`}>
+          <button className={main.btn}>Mo.zip 하기</button>
+        </Link>
       <img src={meet} className={main.meet} alt="Mo.zip"/>
     </div>
   );
