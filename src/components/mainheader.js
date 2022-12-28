@@ -51,11 +51,7 @@ export default function Mainheader(){
             <hr className={main.navbar}></hr>
         </div>
         <div className={main.body}>
-        <h1 className={main.find}>
-          내가 찾던 파트너와
-          <br />
-          함께하세요!
-        </h1>
+        
         
       </div>
         </div>

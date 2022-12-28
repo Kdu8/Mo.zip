@@ -18,6 +18,11 @@ function Mainpage() {
   return (
     <div className={main.main}>
       <Mainheader />
+      <h1 className={main.find}>
+          내가 찾던 파트너와
+          <br />
+          함께하세요!
+        </h1>
       <Link to={`/write`}>
           <button className={main.btn}>Mo.zip 하기</button>
         </Link>

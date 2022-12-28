@@ -16,7 +16,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Intro />} />
-        <Route path="/intro" element={<Intro />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/main" element={<Main />} />
@@ -25,7 +24,7 @@ function App() {
         <Route path="/category2" element={<Category2 />} />
         <Route path="/category3" element={<Category3 />} />
         <Route path="/check" element={<Check />} />
-        <Route path="/postpageview" element={<Postpageview />} />
+        <Route path="/postpage" element={<Postpageview />} />
       </Routes>
     </Router>
   );
