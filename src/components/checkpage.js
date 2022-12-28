@@ -9,6 +9,7 @@ const SERVER_URL =
 
 function Checkpage() {
   const {replace} = useNavigate();
+  
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const verifyCode = e.target.verifyCode.value;

@@ -3,20 +3,18 @@ import signup from "./css/signup.module.css";
 import logo from "./img/logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 const SERVER_URL =
   "https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
 export default function Signpage() {
   const { replace } = useNavigate();
 
-
-  const onSubmitHandler = async (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const nickname = e.target.nickname.value;
-    const tag = e.target.tag.value;
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const nickname = event.target.nickname.value;
+    const tag = event.target.tag.value;
 
     await axios
       .post(
