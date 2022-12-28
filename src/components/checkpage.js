@@ -8,8 +8,8 @@ const SERVER_URL =
   "https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailConfirm";
 
 function Checkpage() {
-  const {replace} = useNavigate();
-  
+  const replace = useNavigate();
+
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const verifyCode = e.target.verifyCode.value;
