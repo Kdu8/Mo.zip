@@ -56,7 +56,7 @@
   background-color: #d7e3fb;
   box-shadow: 0px 0px 5px 1px #00000034;
 }
-input:focus {
+textarea:focus, input:focus {
   outline: none;
 }
 .title {
@@ -69,11 +69,15 @@ input:focus {
   font-size: 16px;
   transform: translate(3.6%, 18%);
   box-shadow: 0px 3px 1px #00000034;
+  resize: none;
+  padding: 2%;
+  padding-left: 3%;
+  padding-top: 3%;
 }
 .title::placeholder {
   font-size: 19px;
   color: #b8b1b1;
-  transform: translate(3%, -30%);
+  
 }
 .intitle {
   position: relative;
@@ -83,14 +87,17 @@ input:focus {
   border-radius: 10px;
   font-weight: bolder;
   font-size: 16px;
-  top: 8%;
+  top: 7%;
   left: 3%;
   box-shadow: 0px 3px 1px #00000034;
+  resize: none;
+  padding: 2%;
+  padding-left: 3%;
+  padding-top: 3%;
 }
 .intitle::placeholder {
   font-size: 20px;
   color: #b8b1b1;
-  transform: translate(3%, -350%);
 }
 .need {
   position: relative;
@@ -100,15 +107,19 @@ input:focus {
   font-weight: bolder;
   font-size: 16px;
   border-radius: 10px;
-  top: 11%;
+  top: 10%;
   left: 3%;
   box-shadow: 0px 3px 1px #00000034;
+  resize: none;
+  padding: 2%;
+  padding-left: 3%;
+  padding-top: 3%;
 }
 .need::placeholder {
   font-weight: bolder;
   font-size: 18px;
   color: #b8b1b1;
-  transform: translate(3%, -80%);
+  
 }
 .enddate {
   display: flex;
@@ -131,6 +142,7 @@ input:focus {
   margin-top: 1%;
   left: 38%;
   box-shadow: 0px 3px 1px #00000034;
+  padding-left: 1.5%;
 }
 .people {
   position: relative;
@@ -151,6 +163,7 @@ input:focus {
   margin-top: -1%;
   left: 38%;
   box-shadow: 0px 3px 1px #00000034;
+  padding-left: 1.5%;
 }
 .categorybox {
   position: relative;

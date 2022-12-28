@@ -59,19 +59,19 @@ function Writepage() {
       <div className={write.writemain}>
         <form onSubmit={onSubmitHandler}>
           <div className={write.writebody}>
-            <input
+            <textarea
               type="text"
               name="title"
               placeholder="제목을 입력하세요"
               className={write.title}
             />
-            <input
+            <textarea
               type="text"
               name="content"
               placeholder="내용을 입력하세요"
               className={write.intitle}
             />
-            <input
+            <textarea
               name="need"
               type="text"
               placeholder="요구조건을 작성하세요"

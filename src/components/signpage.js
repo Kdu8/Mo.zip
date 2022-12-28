@@ -39,7 +39,7 @@ export default function Signpage() {
           <input
             name="name"
             className={signup.input1}
-            placeholder="이름을 입력해주세요."
+            placeholder="이름을 입력해주세요"
             //{...register("name", { required: true, maxLength: 10 })}
           />
           {/* {errors.name && errors.name.type === "required" && (
@@ -51,7 +51,7 @@ export default function Signpage() {
           <input
             type="email"
             name="email"
-            placeholder="이메일을 입력해주세요."
+            placeholder="이메일을 입력해주세요"
             className={signup.input2}
             // {...register("email", {
             //   required: true,
@@ -63,7 +63,7 @@ export default function Signpage() {
           )} */}
           <input
             name="nickname"
-            placeholder="닉네임을 입력해주세요"
+            placeholder="디스코드 닉네임"
             className={signup.nickname}
           />
           <input name="tag" placeholder="#" className={signup.tag} />
