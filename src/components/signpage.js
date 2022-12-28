@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL =
-  "https://mo-zip.online/auth/join";
+  "https://api.mo-zip.online/auth/join";
 export default function Signpage() {
   const  replace  = useNavigate();
 

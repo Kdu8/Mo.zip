@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import meet from "./img/meet.png";
 
-const SERVER_URL = "http://mo-zip.online/user-controller";
+const SERVER_URL = "http://api.mo-zip.online/user-controller";
 
 function Mainpage() {
   const [users, setUsers] = useState([]);
@@ -18,6 +18,15 @@ function Mainpage() {
   return (
     <div className={main.main}>
       <Mainheader users={users}/>
+      <Link to={`/category1`}>
+          <button className={main.category1}>운동</button>
+        </Link>
+        <Link to={`/category2`}>
+          <button className={main.category2}>프로젝트</button>
+        </Link>
+        <Link to={`/category3`}>
+          <button className={main.category3}>공동구매</button>
+        </Link>
       <h1 className={main.find}>
         내가 찾던 파트너와
         <br />

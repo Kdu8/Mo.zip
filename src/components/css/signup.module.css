@@ -63,7 +63,7 @@
 .input1::placeholder {
   color: #b8b1b1;
   font-size: 14px;
-  font-weight: Medium;
+  font-weight: 500;
   transform: translate(-1%, 5%);
 }
 .input2:focus{
@@ -72,7 +72,7 @@
 .input2::placeholder {
 color: #b8b1b1;
 font-size: 14px;
-font-weight: Medium;
+font-weight: 500;
 transform: translate(-1%, 5%);
 }
 .nickname{
@@ -87,7 +87,7 @@ transform: translate(-1%, 5%);
 .nickname::placeholder{
   color: #b8b1b1;
   font-size: 14px;
-  font-weight: Medium;
+  font-weight: 500;
   transform: translate(-5%, 5%);
 }
 .tag{
@@ -100,7 +100,7 @@ transform: translate(-1%, 5%);
   padding-left: 20px;
 }
 .submit{
-  font-weight: Bold;
+  font-weight: 700;
   width: 330px;
   height: 50px;
   border-radius: 5px;
@@ -125,7 +125,7 @@ transform: translate(-1%, 5%);
 .agree{
   cursor: pointer;
   font-size: 13px;
-  font-weight: Medium;
+  font-weight: 500;
   color: black;
   position: absolute;
   transform: translate(30%, 2050%);
@@ -136,10 +136,4 @@ transform: translate(-1%, 5%);
   width: 15px;
   position: absolute;
   transform: translate(400%, 2420%);
-}
-.errormessage1{
-  color: red;
-  font-size: 12px;
-  position: absolute;
-  transform: translate(130%, 2890%);
 }

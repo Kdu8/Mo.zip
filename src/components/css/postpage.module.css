@@ -22,3 +22,32 @@ width: 300px;
   position: relative;
   background-color: #7FA3ED;
 }
+.title{
+  font-size: 36px;
+  font-weight: 600;
+}
+.name{
+  font-size: 20px;
+  font-weight: 600;
+}
+.exDate{
+  font-size: 20px;
+  font-weight: 600;
+}
+.arrowmain{
+  display: flex;
+  width: 150px;
+  transform: translate(25%, 60%);
+}
+.gomain {
+  position: absolute;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  bottom: 10%;
+  left: 25%;
+}
+.arrow {
+  position: relative;
+  width: 25px;
+}

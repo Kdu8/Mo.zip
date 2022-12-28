@@ -44,7 +44,7 @@
     top: 25px;
     left: 30px;
     font-size: 26px;
-    font-weight: bolder;
+    font-weight: 600;
     color: white;
   }
   .inline {
@@ -52,7 +52,7 @@
     top: 45px;
     left: 30px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     color: white;
   }
   .postdiv {
@@ -68,7 +68,7 @@
     top: 75px;
     left: 30px;
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: 600;
     color: white;
   }
   .deadlinedate {
@@ -76,7 +76,7 @@
     top: 53px;
     left: 90px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     color: white;
   }
   .postuser {
@@ -84,7 +84,7 @@
     top: 60px;
     left: 30px;
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: 600;
     color: white;
   }
   .postusername {
@@ -92,7 +92,7 @@
     top: 39px;
     left: 90px;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     color: white;
   }
   .people {
@@ -101,7 +101,7 @@
     top: -8px;
     left: 340px;
     font-size: 12px;
-    font-weight: normal;
+    font-weight: 500;
     color: white;
   }
   .state {
@@ -111,7 +111,7 @@
     width: 65px;
     height: 25px;
     font-size: 12px;
-    font-weight: bolder;
+    font-weight: 600;
     border-radius: 4px;
     border: none;
     background-color: white;

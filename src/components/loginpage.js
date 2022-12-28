@@ -5,7 +5,7 @@ import logo from "./img/logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SERVER_URL = 'https://mo-zip.online/auth/emailVerify';
+const SERVER_URL = 'https://api.mo-zip.online/auth/emailVerify';
 
 function Logpage() {
   const replace = useNavigate();
@@ -31,7 +31,7 @@ function Logpage() {
             type="email"
             name="email"
             placeholder="이메일을 입력해주세요."
-            maxlength="16"
+            maxLength="16"
             className={login.getEmail}
           />
           <input

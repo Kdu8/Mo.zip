@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL =
-  "https://mo-zip.online/auth/emailConfirm";
+  "https://api.mo-zip.online/auth/emailConfirm";
 
 function Checkpage() {
   const replace = useNavigate();

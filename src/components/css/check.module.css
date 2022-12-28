@@ -29,13 +29,13 @@
 }
 .check {
     font-size: 34px;
-    font-weight: Bold;
+    font-weight: 600;
     position: absolute;
     transform: translate(70%, 340%);
   }
 .checknum {
   font-size: 30px;
-  font-weight: Bold;
+  font-weight: 600;
   position: absolute;
   transform: translate(52%, 350%);
 }
@@ -54,11 +54,11 @@
 .getchecknum::placeholder {
   color: #b8b1b1;
   font-size: 14px;
-  font-weight: Medium;
+  font-weight: 500;
   transform: translate(-1%, 5%);
 }
 .submit{
-  font-weight: Bold;
+  font-weight: 600;
   width: 330px;
   height: 50px;
   border-radius: 5px;
@@ -86,7 +86,7 @@
 .one {
   font-size: 16px;
   position: absolute;
-  font-weight: Medium;
+  font-weight: 500;
   transform: translate(32%, 900%);
   color: #858282;
 }

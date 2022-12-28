@@ -27,40 +27,42 @@
 }
 .category1 {
   position: relative;
-  top: 16px;
-  left: 160px;
+  top: -70px;
+  left: 330px;
   background-color: white;
   border: none;
   cursor: pointer;
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 22px;
-  color: #7ea0e5;
+  color: #9a9898;
 }
 .category1:hover {
   color: #7ea0e5;
 }
 .category2 {
   position: relative;
-  top: 16px;
-  left: 240px;
+  top: -70px;
+  left: 400px;
   background-color: white;
   cursor: pointer;
   border: none;
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 22px;
+  color: #9a9898;
 }
 .category2:hover {
   color: #7ea0e5;
 }
 .category3 {
   position: relative;
-  top: 16px;
-  left: 320px;
+  top: -70px;
+  left: 470px;
   background-color: white;
   cursor: pointer;
   border: none;
-  font-weight: bolder;
+  font-weight: 600;
   font-size: 22px;
+  color: #9a9898;
 }
 .category3:hover {
   color: #7ea0e5;
@@ -71,18 +73,18 @@
   margin: 0;
   border: none;
   font-size: 22px;
-  font-weight: bold;
-  width: 170px;
+  font-weight: 600;
+  width: 100px;
   height: 40px;
   top: 13px;
-  left: 820px;
+  left: 70%;
   cursor: pointer;
 }
 #myinfoicon {
   position: relative;
   font-size: 28px;
   top: 8px;
-  left: -5px;
+  left: 1px;
   cursor: pointer;
 }
 .logout {
@@ -90,24 +92,21 @@
   background-color: white;
   margin: 0;
   border: none;
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 32px;
   width: 170px;
   height: 40px;
   top: 13px;
-  left: 800px;
+  left: 1080px;
   cursor: pointer;
 }
 #logouticon {
   position: relative;
   font-size: 32px;
-  top: 8px;
-  left: -5px;
+  top: 9px;
+  left:-5px;
   cursor: pointer;
 }
-.category1,
-.category2,
-.category3,
 .logout {
   color: black;
   text-decoration: none;
@@ -115,12 +114,12 @@
 }
 .find {
   position: relative;
-  font-weight: bolder;
+  font-weight: 700;
   left: 190px;
   top: 190px;
 }
 .btn {
-  font-weight: bolder;
+  font-weight: 600;
   width: 180px;
   height: 60px;
   border-radius: 10px;
