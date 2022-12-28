@@ -8,7 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SERVER_URL = "서버";
+const SERVER_URL = "https://mo-zip.online/boards";
 
 function Writepage() {
   const {replace} = useNavigate();

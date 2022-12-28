@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL =
-  "https://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
+  "https://mo-zip.online/auth/join";
 export default function Signpage() {
   const  replace  = useNavigate();
 
