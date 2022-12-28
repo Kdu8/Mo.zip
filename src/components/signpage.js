@@ -1,23 +1,15 @@
-
 import React from "react";
 import signup from "./css/signup.module.css";
 import logo from "./img/logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-const SERVER_URL = "http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
-
+const SERVER_URL =
+  "http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/join";
 export default function Signpage() {
-  // const {
-  //   register,
-  //   formState: { errors },
-  //   handleSubmit,
-  // } = useForm();
+  const { replace } = useNavigate();
 
-  // const onSubmitcheck = (data) => {
-  //   console.log("data", data);
-  // };
-  const replace = useNavigate();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -26,11 +18,17 @@ export default function Signpage() {
     const nickname = e.target.nickname.value;
     const tag = e.target.tag.value;
 
-    await axios.post(SERVER_URL, { name, email, nickname, tag }, { withCredentials: true }).then((res)=>{
-      console.log(res.data);
-      replace(`/check`);
-    }).catch(alert("빈창을 입력해주세요."));
-    
+    await axios
+      .post(
+        SERVER_URL,
+        { name, email, nickname, tag },
+        { withCredentials: true }
+      )
+      .then((res) => {
+        console.log(res);
+        replace(`/check`);
+      }).catch(alert("회원정보 등록 실패"))
+      ;
   };
 
   return (
@@ -68,19 +66,14 @@ export default function Signpage() {
             placeholder="닉네임을 입력해주세요"
             className={signup.nickname}
           />
-          <input name="tag" placeholder="#" 
-          className={signup.tag} />
+          <input name="tag" placeholder="#" className={signup.tag} />
           <div className={signup.checkboxmom}>
             <input type="checkbox" id="check" className={signup.agreebox} />
             <label for="check" className={signup.agree}>
               이용약관 및 개인정보 보호정책에 동의합니다.
             </label>
           </div>
-          <input
-            className={signup.submit}
-            type="submit"
-            value="계정만들기"
-          />
+          <input className={signup.submit} type="submit" value="계정만들기" />
         </form>
       </div>
     </div>

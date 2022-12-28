@@ -1,9 +1,12 @@
-import Mainpage from "../components/mainpage";
+
 import Category3 from "./css/category3.module.css";
+import Mainheader from "./mainheader";
+import Postbox from "./postbox";
 function category1page() {
   return (
     <div className={Category3.main}>
-      <Mainpage />
+      <Mainheader />
+      <Postbox />
     </div>
   );
 }

@@ -116,7 +116,7 @@
 .find {
   position: relative;
   font-weight: bolder;
-  left: 120px;
+  left: 190px;
   top: 190px;
 }
 .btn {
@@ -131,7 +131,7 @@
   background-color: #7ea0e5;
   top: 10;
   cursor: pointer;
-  left: 120px;
+  left: 190px;
   top: 220px;
 }
 .btn:hover {
@@ -140,122 +140,9 @@
   color: #7ea0e5;
   transform: 0.4s;
 }
-.postbox1 {
+.meet {
+  height: 340px;
   position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 33%;
-  top: 20%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox2 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 62%;
-  top: 20%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox3 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 33%;
-  top: 58%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox4 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 62%;
-  top: 58%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.headline {
-  position: relative;
-  top: 25px;
-  left: 30px;
-  font-size: 26px;
-  font-weight: bolder;
-  color: white;
-}
-.inline {
-  position: relative;
-  top: 45px;
-  left: 30px;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.postdiv {
-  position: relative;
-  top: 65px;
-  left: 30px;
-  width: 330px;
-  height: 2px;
-  color: white;
-}
-.deadline {
-  position: relative;
-  top: 75px;
-  left: 30px;
-  font-size: 16px;
-  font-weight: bolder;
-  color: white;
-}
-.deadlinedate {
-  position: relative;
-  top: 53px;
-  left: 90px;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.postuser {
-  position: relative;
-  top: 60px;
-  left: 30px;
-  font-size: 16px;
-  font-weight: bolder;
-  color: white;
-}
-.postusername {
-  position: relative;
-  top: 39px;
-  left: 90px;
-  font-size: 16px;
-  font-weight: normal;
-  color: white;
-}
-.people {
-  position: relative;
-  width: 20px;
-  top: -8px;
-  left: 340px;
-  font-size: 12px;
-  font-weight: normal;
-  color: white;
-}
-.state {
-  position: relative;
-  top: 2px;
-  left: 300px;
-  width: 65px;
-  height: 25px;
-  font-size: 12px;
-  font-weight: bolder;
-  border-radius:4px;
-  border: none;
-  background-color: white;
-  color: #7ea0e5;
-  box-shadow:  5px 3px #00000034;
+  top: 220px;
+  left: 750px;
 }

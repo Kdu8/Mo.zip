@@ -17,7 +17,7 @@ function Checkpage() {
     await axios.post(SERVER_URL, { verifyCode }, { withCredentials: true }).then((response) => {
       console.log(response);
       replace(`/main`);
-    });
+    }).catch(alert("인증번호 불일치"));
   };
   return (
     <div className={check.body}>

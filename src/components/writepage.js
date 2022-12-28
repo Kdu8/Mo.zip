@@ -6,10 +6,12 @@ import Mainheader from "./mainheader";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
-import Logpage from "./loginpage";
-const SERVER_URL =
-  "http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/boards";
+import { useNavigate } from "react-router-dom";
+
+const SERVER_URL = "서버";
+
 function Writepage() {
+  const {replace} = useNavigate();
   const [endDate, setEndDate] = useState(new Date());
 
   const Example = () => {
@@ -30,7 +32,6 @@ function Writepage() {
       }
     }
   };
-  const [checkwrite, setCheckwrite] = useState(null);
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -39,9 +40,17 @@ function Writepage() {
     const exDate = new Date(e.target.exDate.value).toISOString();
     const maxApp = Number(e.target.maxApp.value);
     const title = e.target.title.value;
+
+    console.log({category,content, exDate, maxApp, title})
     
-    await axios.post(SERVER_URL, { category, content, exDate, maxApp, title});
-    console.log({ category, content, exDate, maxApp, title});
+    await axios
+      .post(SERVER_URL, { category, content, exDate, maxApp, title })
+      .then((res) => {
+        console.log(res.data);
+        alert("글이 등록되었습니다.");
+        replace(`/main`);
+      })
+      .catch(alert("등록 실패"));
   };
 
   return (

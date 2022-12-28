@@ -9,6 +9,7 @@ import Category3 from "./routes/category3";
 import Check from "./routes/check";
 import { Routes } from "react-router";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Postpageview from "./routes/postpageview";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/category2" element={<Category2 />} />
         <Route path="/category3" element={<Category3 />} />
         <Route path="/check" element={<Check />} />
+        <Route path="/postpageview" element={<Postpageview />} />
       </Routes>
     </Router>
   );

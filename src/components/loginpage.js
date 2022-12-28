@@ -8,17 +8,16 @@ import { useNavigate } from "react-router-dom";
 const SERVER_URL = 'http://ec2-52-79-236-28.ap-northeast-2.compute.amazonaws.com/auth/emailVerify';
 
 function Logpage() {
-  const replace = useNavigate();
+  const {replace} = useNavigate();
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
 
     await axios.post(SERVER_URL, { email }, { withCredentials: true }).then((res)=>{
-      console.log(res.data);
+      console.log(res);
       replace(`/check`);
-    }).catch(alert("이메일을 입력해주세요."));
-
+    }).catch(alert("로그인 실패"));
   };
 
   return (
