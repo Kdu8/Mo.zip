@@ -1,6 +1,8 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
 export default function Postbox({board}) {
+  console.log(typeof board);
+  console.log(board);
   return (
     <div>
       <div className={postbox.postbox}>
