@@ -23,7 +23,7 @@ export default function Mainheader({ user }) {
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            한준
+            {user}
           </button>
         </Link>
         <Link to={`/login`}>
