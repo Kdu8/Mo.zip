@@ -143,9 +143,8 @@ function Writepage() {
                 공동구매
               </label>
             </div>
-            <Link to={`/write`}>
-              <input type="submit" value="게시하기" className={write.submit} />
-            </Link>
+
+            <input type="submit" value="게시하기" className={write.submit} />
           </div>
         </form>
         <div className={write.outmain}>

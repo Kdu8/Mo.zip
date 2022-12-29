@@ -38,7 +38,9 @@ function Mainpage() {
         <br />
         함께하세요!
       </h1>
+      <Link to={`/write`}>
       <button className={main.btn}>Mo.zip 하기</button>
+      </Link>
       <img src={meet} className={main.meet} alt="Mo.zip" />
     </div>
   );

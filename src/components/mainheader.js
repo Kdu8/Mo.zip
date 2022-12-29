@@ -10,16 +10,17 @@ export default function Mainheader({ user }) {
   console.log(user);
   const replace = useNavigate();
   const Logout = () => {
-    axios.get(LOGOUT_URL, { withCredentials: true }).
-    then((res)=> {
-      console.log(res);
-      replace(`/login`);
-    }).catch(err => {
-      console.log(err);
-      alert("로그인 실패");
-    }
-    )
-  }
+    axios
+      .get(LOGOUT_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res);
+        replace(`/login`);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("로그아웃 실패");
+      });
+  };
   return (
     <div>
       <link
@@ -42,12 +43,12 @@ export default function Mainheader({ user }) {
             {user}
           </button>
         </Link>
-          <button className={main.logout} onClick={Logout}>
-            <span className="material-symbols-outlined" id={main.logouticon}>
-              logout
-            </span>
-            Log out
-          </button>
+        <button className={main.logout} onClick={Logout}>
+          <span className="material-symbols-outlined" id={main.logouticon}>
+            logout
+          </span>
+          Log out
+        </button>
         <hr className={main.navbar}></hr>
       </div>
       <div className={main.body}></div>
