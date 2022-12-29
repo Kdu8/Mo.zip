@@ -3,10 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
-  console.log(board);
-  console.log(typeof board);
-  console.log(typeof (board.exDate));
-  console.log(board.exDate);
+  if(board.exDate !== undefined){
   return (
     <div>
       <div className={postbox.postbox}>
@@ -47,7 +44,8 @@ export default function Postbox({board}) {
       </div>
     </div>
   );
+  }
 }
 Postbox.prototype = {
-  exDate: PropTypes.string.isRequired.substring(0,10),
+  exDate: PropTypes.string.isRequired,
 }
