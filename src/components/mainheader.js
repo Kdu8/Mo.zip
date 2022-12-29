@@ -23,7 +23,6 @@ export default function Mainheader({user}) {
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            user
             {user.map((user) => {
               return (
                 <div key={user.id} className={main.myinfo}>
