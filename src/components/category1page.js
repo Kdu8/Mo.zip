@@ -11,18 +11,24 @@ const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
+
+
   const [board, setBoard] = useState([]);
   useEffect(() => {
     axios
       .get(BOARD_URL, { withCredentials: true })
       .then((res) => {
-        console.log(res.data);
+        res.data.map(board => {
+          console.log(board);
+        });
         setBoard(res.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+
+
   const [user, setUser] = useState("");
   useEffect(() => {
     axios
