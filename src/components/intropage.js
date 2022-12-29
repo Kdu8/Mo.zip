@@ -11,8 +11,29 @@ import meet from "./img/meet.png";
 import Mozipmacbook from "./img/Mozip-macbook.png";
 import Mozipdesktop from "./img/Mo.zip-desktop.png";
 import Fade from "react-reveal/Fade";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-function inview() {
+const SERVER_URL = "https://api.mo-zip.online/users/me";
+function Inview() {
+  const replace = useNavigate();
+
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res);
+        replace(`/main`);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("유저 정보 X");
+      });
+  }, []);
+
   return (
     <div className={intro.body}>
       <header className={intro.header}>
@@ -155,18 +176,18 @@ function inview() {
             <div className={intro.grop}>
               <div className={intro.partner}>
                 <Fade bottom>
-                <div className={intro.ex2}>
-                  <img src={사람2} alt="사람2" className={intro.사람2} />
-                  <div className={intro.card2}>
-                    <p className={intro.text2}>
-                      " 오늘 저녁 시간에 축구할 멋진 친구들을 찾아요! "
-                    </p>
-                    <div className={intro.condition}>요구조건</div>
-                    <p className={intro.cardtext2}>
-                      축구를 할 수 있는 건강한 몸과 발만 있으면 돼요.
-                    </p>
+                  <div className={intro.ex2}>
+                    <img src={사람2} alt="사람2" className={intro.사람2} />
+                    <div className={intro.card2}>
+                      <p className={intro.text2}>
+                        " 오늘 저녁 시간에 축구할 멋진 친구들을 찾아요! "
+                      </p>
+                      <div className={intro.condition}>요구조건</div>
+                      <p className={intro.cardtext2}>
+                        축구를 할 수 있는 건강한 몸과 발만 있으면 돼요.
+                      </p>
+                    </div>
                   </div>
-                </div>
                 </Fade>
               </div>
             </div>
@@ -174,16 +195,16 @@ function inview() {
             <div className={intro.grop}>
               <div className={intro.partner}>
                 <Fade bottom>
-                <div className={intro.ex3}>
-                  <img src={사람3} alt="사람3" className={intro.사람3} />
-                  <div className={intro.card3}>
-                    <p className={intro.text3}>
-                      " 과자 공동구매 하실 분을 찾아요 "
-                    </p>
-                    <div className={intro.condition}>요구조건</div>
-                    <p className={intro.cardtext3}>모두 환영이에요!!</p>
+                  <div className={intro.ex3}>
+                    <img src={사람3} alt="사람3" className={intro.사람3} />
+                    <div className={intro.card3}>
+                      <p className={intro.text3}>
+                        " 과자 공동구매 하실 분을 찾아요 "
+                      </p>
+                      <div className={intro.condition}>요구조건</div>
+                      <p className={intro.cardtext3}>모두 환영이에요!!</p>
+                    </div>
                   </div>
-                </div>
                 </Fade>
               </div>
             </div>
@@ -206,4 +227,4 @@ function inview() {
   );
 }
 
-export default inview;
+export default Inview;
