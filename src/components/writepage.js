@@ -40,9 +40,14 @@ function Writepage() {
     const exDate = new Date(e.target.exDate.value).toISOString();
     const maxApp = Number(e.target.maxApp.value);
     const title = e.target.title.value;
+    const requirement = e.target.requirement.value;
 
     await axios
-      .post(SERVER_URL, { category, content, exDate, maxApp, title }, { withCredentials: true })
+      .post(
+        SERVER_URL,
+        { category, content, exDate, maxApp, title, requirement },
+        { withCredentials: true }
+      )
       .then((res) => {
         console.log(res.data);
         alert("글이 등록되었습니다.");
@@ -69,8 +74,8 @@ function Writepage() {
               className={write.intitle}
             />
             <textarea
-              name="need"
               type="text"
+              name="requirement"
               placeholder="요구조건을 작성하세요"
               className={write.need}
             />
@@ -102,7 +107,7 @@ function Writepage() {
                 value="Sports"
                 onChange={(e) => checkOnlyOne(e.target)}
               />
-              <label for="sport" className={write.category1_1}>
+              <label htmlFor="sport" className={write.category1_1}>
                 운동
               </label>
             </div>
@@ -116,7 +121,7 @@ function Writepage() {
                 name="category"
                 onChange={(e) => checkOnlyOne(e.target)}
               />
-              <label for="project" className={write.category2_2}>
+              <label htmlFor="project" className={write.category2_2}>
                 프로젝트
               </label>
             </div>
@@ -130,7 +135,7 @@ function Writepage() {
                 name="category"
                 onChange={(e) => checkOnlyOne(e.target)}
               />
-              <label for="buy" className={write.category3_3}>
+              <label htmlFor="buy" className={write.category3_3}>
                 공동구매
               </label>
             </div>
