@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import write from "./css/write.module.css";
 import arrow from "./img/arrow.png";
 import Mainheader from "./mainheader";
@@ -9,6 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const SERVER_URL = "https://api.mo-zip.online/boards";
+const USER_URL = "https://api.mo-zip.online/users/me";
 
 function Writepage() {
   const replace = useNavigate();
@@ -58,10 +59,21 @@ function Writepage() {
         alert("글 등록 실패");
       });
   };
-
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(USER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data.user.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className={write.main}>
-      <Mainheader />
+      <Mainheader user={user}/>
       <div className={write.writemain}>
         <form onSubmit={onSubmitHandler}>
           <div className={write.writebody}>

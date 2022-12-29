@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const SERVER_URL = "https://api.mo-zip.online/boards"
+const BOARD_URL = "https://api.mo-zip.online/boards";
+const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
   const [board, setBoard] = useState([]);
@@ -22,9 +23,21 @@ function Category1page() {
         console.log(err);
       });
   }, []);
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data.user.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className={category1.main}>
-      <Mainheader />
+      <Mainheader user={user}/>
       <Postbox board={board}/>
       <Link to={`/category1`}>
           <button className={category1.category1}>운동</button>

@@ -4,10 +4,26 @@ import Mainheader from "./mainheader";
 import Postbox from "./postbox";
 import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
-function category1page() {
+import { useEffect, useState } from "react";
+import  axios from "axios";
+
+const SERVER_URL ="https://api.mo-zip.online/users/me";
+function Category1page() {
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data.user.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className={Category3.main}>
-      <Mainheader />
+      <Mainheader user={user}/>
       <Link to={`/category1`}>
           <button className={Category3.category1}>운동</button>
         </Link>
@@ -29,4 +45,4 @@ function category1page() {
     </div>
   );
 }
-export default category1page;
+export default Category1page;
