@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import main from "./css/main.module.css";
 import Mainheader from "./mainheader";
 import meet from "./img/meet.png";
@@ -6,8 +6,21 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
+const LOGOUT_URL = "https://api.mo-zip.online/auth/logout";
 
 function Mainpage() {
+  const replace = useNavigate();
+  const Logout = () => {
+    axios.get(LOGOUT_URL, { withCredentials: true }).
+    then((res)=> {
+      console.log(res.data);
+      replace(`/intro`);
+    }).catch(err => {
+      console.log(err);
+      alert("로그인 실패");
+    }
+    )
+  }
   const [user, setUser] = useState("");
   useEffect(() => {
     axios
@@ -38,9 +51,7 @@ function Mainpage() {
         <br />
         함께하세요!
       </h1>
-      <Link to={`/write`}>
-        <button className={main.btn}>Mo.zip 하기</button>
-      </Link>
+        <button className={main.btn} onClick={Logout}>Mo.zip 하기</button>
       <img src={meet} className={main.meet} alt="Mo.zip" />
     </div>
   );
