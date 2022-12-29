@@ -5,7 +5,7 @@ import postgo from "./img/golist.png";
 import arrow from "./img/arrow.png";
 import { Link } from "react-router-dom";
 
-const SERVER_URL = "http://api.mo-zip.online/boards/";
+const SERVER_URL = "http://api.mo-zip.online/boards/{id}";
 export default function Postpage() {
   return (
     <div className={postpage.body}>

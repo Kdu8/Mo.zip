@@ -5,19 +5,20 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import meet from "./img/meet.png";
 
-const SERVER_URL = "http://api.mo-zip.online/user-controller";
+const SERVER_URL = "http://api.mo-zip.online/users/me";
 
 function Mainpage() {
-  const [users, setUsers] = useState([]);
+  const [user, setUser] = useState([]);
   useEffect(() => {
     axios.get(SERVER_URL, { withCredentials: true }).then((response) => {
-      setUsers(response.data);
+      console.log(response);
+      setUser(response.data);
     });
   }, []);
 
   return (
     <div className={main.main}>
-      <Mainheader users={users}/>
+      <Mainheader users={user}/>
       <Link to={`/category1`}>
           <button className={main.category1}>운동</button>
         </Link>

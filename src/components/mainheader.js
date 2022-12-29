@@ -2,7 +2,7 @@ import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
 
-export default function Mainheader(/*{users}*/) {
+export default function Mainheader({user}) {
   return (
     <div>
       <link
@@ -24,13 +24,13 @@ export default function Mainheader(/*{users}*/) {
               person
             </span>
             user
-            {/* {users.map((user) => {
+            {user.map((user) => {
               return (
                 <div key={user.id} className={main.myinfo}>
                   {user.name}
                 </div>
               );
-            })} */}
+            })}
           </button>
         </Link>
         <Link to={`/login`}>
