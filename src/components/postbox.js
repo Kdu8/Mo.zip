@@ -22,7 +22,7 @@ export default function Postbox({board}) {
             <p className={postbox.deadlinedate}>{`${year}년 ${month}월 ${day}일`}</p>
             <p className={postbox.postuser}>작성자</p>
             <p className={postbox.postusername}>{board.writerName}</p>
-            <p className={postbox.people}>{board.maxApp}</p>
+            <p className={postbox.people}>{`${board.applicantCount}/${board.maxApp}`}</p>
             <button className={postbox.state}>마감완료</button>
           </div>
         </Link>
