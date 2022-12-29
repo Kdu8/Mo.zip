@@ -1,10 +1,11 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
 export default function Postbox({board}) {
-  console.log(typeof board.exDate);
-  console.log(new Date(board.exDate));
-  console.log(new Date(board.exDate).toISOString().substring(0,10));
-  console.log(new Date(board.exDate).getFullYear());
+  console.log(board);
+  console.log(board.exDate);
+  console.log(new Date(`${board.exDate}`));
+  console.log(new Date(`${board.exDate}`).toISOString().substring(0,10));
+  console.log(new Date(`${board.exDate}`).getFullYear());
   return (
     <div>
       <div className={postbox.postbox}>
