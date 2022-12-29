@@ -16,6 +16,7 @@ function Logpage() {
 
     await axios.post(SERVER_URL, { email }, { withCredentials: true }).then((res)=>{
       console.log(res.data);
+      alert("이메일을 확인해주세요.");
       replace(`/check`);
     }).catch(err => {
       console.log(err);

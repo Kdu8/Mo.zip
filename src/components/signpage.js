@@ -23,6 +23,7 @@ export default function Signpage() {
       )
       .then((res) => {
         console.log(res);
+        alert("이메일을 확인해주세요.");
         replace(`/check`);
       })
       .catch((err) => {
