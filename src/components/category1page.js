@@ -13,7 +13,7 @@ const SERVER_URL = "https://api.mo-zip.online/users/me";
 function Category1page() {
 
 
-  const [board, setBoard] = useState([]);
+  const [board, setBoard] = useState("");
   useEffect(() => {
     axios
       .get(BOARD_URL, { withCredentials: true })
