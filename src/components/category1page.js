@@ -18,6 +18,7 @@ function Category1page() {
     axios
       .get(BOARD_URL, { withCredentials: true })
       .then((res) => {
+        console.log(res.data);
         res.data.map(ele => {
           console.log(ele);
           setBoard(ele);

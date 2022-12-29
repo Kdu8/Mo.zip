@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
   console.log(typeof board);
+  console.log(typeof (board.exDate));
   console.log(board.exDate);
   return (
     <div>
