@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const SERVER_URL = "https://api.mo-zip.online/boards";
 
 function Writepage() {
-  const {replace} = useNavigate();
+  const replace = useNavigate();
   const [endDate, setEndDate] = useState(new Date());
 
   const Example = () => {
