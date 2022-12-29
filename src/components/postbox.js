@@ -1,6 +1,10 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
 export default function Postbox({board}) {
+  console.log(typeof board.exDate);
+  console.log(new Date(board.exDate));
+  console.log(new Date(board.exDate).toISOString().substring(0,10));
+  console.log(new Date(board.exDate).getFullYear());
   return (
     <div>
       <div className={postbox.postbox}>
@@ -12,7 +16,7 @@ export default function Postbox({board}) {
             </p>
             <hr className={postbox.postdiv}></hr>
             <p className={postbox.deadline}>마감일</p>
-            <p className={postbox.deadlinedate}>{board.exDate.substring(0,10)}</p>
+            <p className={postbox.deadlinedate}>{board.exDate}</p>
             <p className={postbox.postuser}>작성자</p>
             <p className={postbox.postusername}>{board.writerName}</p>
             <p className={postbox.people}>{board.maxApp}</p>
