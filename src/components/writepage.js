@@ -44,7 +44,7 @@ function Writepage() {
     console.log({category,content, exDate, maxApp, title})
     
     await axios
-      .post(SERVER_URL, { category, content, exDate, maxApp, title })
+      .post(SERVER_URL, { category, content, exDate, maxApp, title }, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         alert("글이 등록되었습니다.");

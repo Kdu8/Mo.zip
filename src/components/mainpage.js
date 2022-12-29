@@ -10,7 +10,7 @@ const SERVER_URL = "http://api.mo-zip.online/user-controller";
 function Mainpage() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    axios.get(SERVER_URL).then((response) => {
+    axios.get(SERVER_URL, { withCredentials: true }).then((response) => {
       setUsers(response.data);
     });
   }, []);
