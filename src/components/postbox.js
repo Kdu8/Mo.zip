@@ -1,23 +1,21 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
-export default function Postbox() {
+export default function Postbox({board}) {
   return (
     <div>
       <div className={postbox.postbox}>
         <Link to={`/postpage`}>
           <div className={postbox.postbox1}>
-            <p className={postbox.headline}>Mo.zip 프로젝트 모집</p>
+            <p className={postbox.headline}>{board.title}</p>
             <p className={postbox.inline}>
-              다수의 인원을 내가 원하는 파트너들과 함께
-              <br /> 할 수 있도록 모집하는 웹사이트를 함께 개발할 Frontend 직군
-              파트너를 찾습니다 !
+              {board.content}
             </p>
             <hr className={postbox.postdiv}></hr>
             <p className={postbox.deadline}>마감일</p>
-            <p className={postbox.deadlinedate}>2022년 12월 21일</p>
+            <p className={postbox.deadlinedate}>{board.exDate}</p>
             <p className={postbox.postuser}>작성자</p>
-            <p className={postbox.postusername}>김원욱</p>
-            <p className={postbox.people}>2/2</p>
+            <p className={postbox.postusername}>{board.writerName}</p>
+            <p className={postbox.people}>{board.maxApp}</p>
             <button className={postbox.state}>마감완료</button>
           </div>
         </Link>

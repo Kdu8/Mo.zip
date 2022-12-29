@@ -4,12 +4,28 @@ import Mainheader from "./mainheader";
 import Postbox from "./postbox";
 import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const SERVER_URL = "https://api.mo-zip.online/boards"
 
 function Category1page() {
-  
+  const [board, setBoard] = useState([]);
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setBoard(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className={category1.main}>
       <Mainheader />
+      <Postbox board={board}/>
       <Link to={`/category1`}>
           <button className={category1.category1}>운동</button>
         </Link>
@@ -27,7 +43,6 @@ function Category1page() {
       <Link to={`/write`}>
           <button className={main.btn}>Mo.zip 하기</button>
         </Link>
-      <Postbox />
     </div>
   );
 }
