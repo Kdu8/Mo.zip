@@ -30,7 +30,6 @@ function Inview() {
       })
       .catch((err) => {
         console.log(err);
-        alert("유저 정보 X");
       });
   }, []);
 
