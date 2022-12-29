@@ -1,9 +1,33 @@
 import main from "./css/main.module.css";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export default function Mainheader({name}) {
+const SERVER_URL = "http://api.mo-zip.online/users/me";
+
+export default function Mainheader() {
+  const [name, setname] = useState([]);
+
+  const fetchData = async () => {
+    const response = await axios.get(SERVER_URL);
+    setname(response.data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const getUser = async (e) => {
+    await axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch(alert("유저 정보 불러오기 실패"));
+    fetchData();
+  };
+
   return (
     <div>
       <link
@@ -18,13 +42,16 @@ export default function Mainheader({name}) {
         <Link to={`/main`}>
           <img src={logo} className={main.logo} alt="Mo.zip" />
         </Link>
-
         <Link to={`/mypage`}>
           <button className={main.myinfo}>
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            {name}
+            {name?.map((me) => (
+              <div key={me.id} className={main.myinfo}>
+                <div>{me.name}</div>
+              </div>
+            ))}
           </button>
         </Link>
         <Link to={`/login`}>
@@ -40,7 +67,4 @@ export default function Mainheader({name}) {
       <div className={main.body}></div>
     </div>
   );
-}
-Mainheader.prototype = {
-  name: PropTypes.string.isRequired,
 }
