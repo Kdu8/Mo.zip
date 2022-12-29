@@ -12,8 +12,8 @@ export default function Mainheader({ user }) {
   const Logout = () => {
     axios.get(LOGOUT_URL, { withCredentials: true }).
     then((res)=> {
-      console.log();
-      replace(`/intro`);
+      console.log(res);
+      replace(`/login`);
     }).catch(err => {
       console.log(err);
       alert("로그인 실패");

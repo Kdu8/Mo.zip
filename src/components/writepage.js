@@ -52,6 +52,10 @@ function Writepage() {
         console.log(res.data);
         alert("글이 등록되었습니다.");
         replace(`/main`);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("글 등록 실패");
       });
   };
 
@@ -139,8 +143,9 @@ function Writepage() {
                 공동구매
               </label>
             </div>
-
-            <input type="submit" value="게시하기" className={write.submit} />
+            <Link to={`/write`}>
+              <input type="submit" value="게시하기" className={write.submit} />
+            </Link>
           </div>
         </form>
         <div className={write.outmain}>
