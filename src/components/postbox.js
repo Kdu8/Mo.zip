@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
+  console.log(board);
   console.log(typeof board);
   console.log(typeof (board.exDate));
   console.log(board.exDate);
