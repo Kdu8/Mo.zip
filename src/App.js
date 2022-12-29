@@ -24,7 +24,7 @@ function App() {
         <Route path="/category2" element={<Category2 />} />
         <Route path="/category3" element={<Category3 />} />
         <Route path="/check" element={<Check />} />
-        <Route path="/postpage" element={<Postpageview />} />
+        <Route path="/postpage:id" element={<Postpageview />} />
       </Routes>
     </Router>
   );
