@@ -10,6 +10,7 @@ import Check from "./routes/check";
 import { Routes } from "react-router";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Postpageview from "./routes/postpageview";
+import Mypage from "./routes/mypage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/category3" element={<Category3 />} />
         <Route path="/check" element={<Check />} />
         <Route path="/postpage:id" element={<Postpageview />} />
+        <Route path="/mypage" element={<Mypage />} />
       </Routes>
     </Router>
   );

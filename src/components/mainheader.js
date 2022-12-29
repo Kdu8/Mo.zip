@@ -7,25 +7,18 @@ import { useEffect, useState } from "react";
 const SERVER_URL = "http://api.mo-zip.online/users/me";
 
 export default function Mainheader() {
-  const [name, setname] = useState([]);
-
-  const fetchData = async () => {
-    const response = await axios.get(SERVER_URL);
-    setname(response.data);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [name, setName] = useState('');
 
   const getUser = async (e) => {
     await axios
       .get(SERVER_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
+        //setName(res.data.name);
       })
-      .catch(alert("유저 정보 불러오기 실패"));
-    fetchData();
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   return (
@@ -47,11 +40,7 @@ export default function Mainheader() {
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            {name?.map((me) => (
-              <div key={me.id} className={main.myinfo}>
-                <div>{me.name}</div>
-              </div>
-            ))}
+            
           </button>
         </Link>
         <Link to={`/login`}>

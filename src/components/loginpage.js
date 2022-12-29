@@ -15,9 +15,12 @@ function Logpage() {
     const email = e.target.email.value;
 
     await axios.post(SERVER_URL, { email }, { withCredentials: true }).then((res)=>{
-      console.log(res);
+      console.log(res.data);
       replace(`/check`);
-    }).catch(alert("로그인 실패"));
+    }).catch(err => {
+      console.log(err);
+      alert("로그인 실패");
+    });
   };
 
   return (

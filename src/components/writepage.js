@@ -41,16 +41,13 @@ function Writepage() {
     const maxApp = Number(e.target.maxApp.value);
     const title = e.target.title.value;
 
-    console.log({category,content, exDate, maxApp, title})
-    
     await axios
       .post(SERVER_URL, { category, content, exDate, maxApp, title }, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         alert("글이 등록되었습니다.");
         replace(`/main`);
-      })
-      .catch(alert("등록 실패"));
+      });
   };
 
   return (
