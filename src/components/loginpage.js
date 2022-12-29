@@ -35,7 +35,6 @@ function Logpage() {
             type="email"
             name="email"
             placeholder="이메일을 입력해주세요."
-            maxLength="16"
             className={login.getEmail}
           />
           <input

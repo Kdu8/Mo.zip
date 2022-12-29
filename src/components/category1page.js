@@ -7,14 +7,14 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BOARD_URL = "https://api.mo-zip.online/boards";
+const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
   const [board, setBoard] = useState([]);
   useEffect(() => {
     axios
-      .get(SERVER_URL, { withCredentials: true })
+      .get(BOARD_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         setBoard(res.data);

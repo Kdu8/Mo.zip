@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const LOGOUT_URL = "https://api.mo-zip.online/auth/logout";
 
 export default function Mainheader({ user }) {
-  console.log(user);
   const replace = useNavigate();
   const Logout = () => {
     axios
