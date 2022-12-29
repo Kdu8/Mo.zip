@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
   if(board.exDate !== undefined){
+    console.log(board.exDate.substring(0,10));
   return (
     <div>
       <div className={postbox.postbox}>
