@@ -4,9 +4,24 @@ import postarrow from "./img/postarrow.png";
 import postgo from "./img/golist.png";
 import arrow from "./img/arrow.png";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const SERVER_URL = "http://api.mo-zip.online/boards/{id}";
+const SERVER_URL = "https://api.mo-zip.online/boards/{id}";
 export default function Postpage() {
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res);
+        // setList(res);
+        })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  
   return (
     <div className={postpage.body}>
       <Mainheader />
