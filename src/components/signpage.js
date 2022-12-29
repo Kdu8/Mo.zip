@@ -4,10 +4,9 @@ import logo from "./img/logo.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const SERVER_URL =
-  "https://api.mo-zip.online/auth/join";
+const SERVER_URL = "https://api.mo-zip.online/auth/join";
 export default function Signpage() {
-  const  replace  = useNavigate();
+  const replace = useNavigate();
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
@@ -25,8 +24,11 @@ export default function Signpage() {
       .then((res) => {
         console.log(res);
         replace(`/check`);
-      }).catch(alert("회원정보 등록 실패"))
-      ;
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("회원정보 등록 실패");
+      });
   };
 
   return (
