@@ -49,5 +49,5 @@ export default function Postbox({board}) {
   );
 }
 Postbox.prototype = {
-  exDate: PropTypes.string.isRequired,
+  exDate: PropTypes.string.isRequired.substring(0,10),
 }
