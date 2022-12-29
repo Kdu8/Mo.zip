@@ -1,8 +1,10 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 export default function Postbox({board}) {
   console.log(typeof board);
-  console.log(board);
+  console.log(board.maxApp);
   return (
     <div>
       <div className={postbox.postbox}>
@@ -43,4 +45,7 @@ export default function Postbox({board}) {
       </div>
     </div>
   );
+}
+Postbox.prototype = {
+  exDate: PropTypes.string.isRequired,
 }
