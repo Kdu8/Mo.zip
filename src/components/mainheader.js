@@ -4,7 +4,7 @@ import logo from "./img/logo.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const SERVER_URL = "http://api.mo-zip.online/users/me";
+const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 export default function Mainheader() {
   const [name, setName] = useState('');
@@ -14,7 +14,7 @@ export default function Mainheader() {
       .get(SERVER_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
-        //setName(res.data.name);
+        setName(res.data.name);
       })
       .catch(err => {
         console.log(err);
@@ -40,7 +40,7 @@ export default function Mainheader() {
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            
+            {name}
           </button>
         </Link>
         <Link to={`/login`}>

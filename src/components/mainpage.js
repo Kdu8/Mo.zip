@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import main from "./css/main.module.css";
 import Mainheader from "./mainheader";
-
 import meet from "./img/meet.png";
 
 
