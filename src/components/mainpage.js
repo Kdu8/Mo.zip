@@ -19,7 +19,7 @@ function Mainpage() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   return (
     <div className={main.main}>
