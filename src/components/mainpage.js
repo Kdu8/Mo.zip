@@ -14,7 +14,7 @@ function Mainpage() {
       .get(SERVER_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
-        setUser(res.data);
+        setUser(res.data.user.name);
       })
       .catch((err) => {
         console.log(err);
