@@ -1,8 +1,9 @@
 import main from "./css/main.module.css";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
 
-export default function Mainheader({user}) {
+export default function Mainheader({name}) {
   return (
     <div>
       <link
@@ -23,13 +24,7 @@ export default function Mainheader({user}) {
             <span className="material-symbols-outlined" id={main.myinfoicon}>
               person
             </span>
-            {user.map((user) => {
-              return (
-                <div key={user.id} className={main.myinfo}>
-                  {user.name}
-                </div>
-              );
-            })}
+            {name}
           </button>
         </Link>
         <Link to={`/login`}>
@@ -45,4 +40,7 @@ export default function Mainheader({user}) {
       <div className={main.body}></div>
     </div>
   );
+}
+Mainheader.prototype = {
+  name: PropTypes.string.isRequired,
 }
