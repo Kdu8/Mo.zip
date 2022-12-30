@@ -7,16 +7,17 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const BOARD_URL =
-  "https://api.mo-zip.online/boards?category=Sports&size=4&sort=id,DESC&page=0";
+const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports&size=4&sort=id,DESC&page=0";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
+
   const [boardlist, setBoardList] = useState([]);
-  useEffect(() => {
-    axios.get(BOARD_URL, { withCredentials: true }).then((res) => {
+  useEffect(()=>{
+    axios.get(BOARD_URL, {withCredentials: true})
+    .then((res) => {
       setBoardList(res.data);
-    });
+    })
   }, []);
 
   const [user, setUser] = useState("");
@@ -34,7 +35,7 @@ function Category1page() {
   return (
     <div className={category1.main}>
       <Mainheader user={user} />
-
+      
       <Link to={`/category1`}>
         <button className={category1.category1}>운동</button>
       </Link>
@@ -44,24 +45,25 @@ function Category1page() {
       <Link to={`/category3`}>
         <button className={category1.category3}>공동구매</button>
       </Link>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h1 className={main.find}>
-          내가 찾던 파트너와
-          <br />
-          함께하세요!
-        </h1>
-        <Link to={`/write`}>
-          <button className={main.btn}>Mo.zip 하기</button>
-        </Link>
-        {boardlist.map((ele) => {
-          return <Postbox board={ele} />;
-        })}
-      </div>
+      
+      <h1 className={main.find}>
+        내가 찾던 파트너와
+        <br />
+        함께하세요!
+      </h1>
+      <Link to={`/write`}>
+        <button className={main.btn}>Mo.zip 하기</button>
+      </Link>
+      {boardlist.map((ele)=>{
+        return (
+          <Postbox board={ele}/>
+        );
+      })}
     </div>
   );
 }
 export default Category1page;
 
 category1.prototype = {
-  exDate: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+  exDate:  PropTypes.arrayOf(PropTypes.string).isRequired,
+}
