@@ -1,6 +1,7 @@
 import category1 from "./css/category1.module.css";
 import Mainheader from "./mainheader";
 import Postbox from "./postbox";
+import postboxcss from "./css/postbox.module.css";
 import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -57,7 +58,7 @@ function Category1page() {
       <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "2rem"}}>
       {boardlist.map((ele)=>{
         return (
-          <Postbox board={ele}/>
+          <Postbox board={ele} className={postboxcss.postbox}/>
         );
       })}
       </div>
