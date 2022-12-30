@@ -55,6 +55,7 @@ function Category1page() {
       </Link>
       <div
         style={{
+          position: "absolute",
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
           columnGap: "1.8rem",
