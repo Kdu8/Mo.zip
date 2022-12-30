@@ -13,29 +13,12 @@ const SERVER_URL = "https://api.mo-zip.online/users/me";
 function Category1page() {
 
   const [boardlist, setBoardList] = useState([]);
-  //const [board, setBoard] = useState("");
   useEffect(()=>{
     axios.get(BOARD_URL, {withCredentials: true})
     .then((res) => {
       setBoardList(res.data);
     })
   }, []);
-
-  
-  // useEffect(() => {
-  //   axios
-  //     .get(BOARD_URL, { withCredentials: true })
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       res.data.map((ele) => {
-  //         console.log(ele);
-  //         setBoard(ele);
-  //       });
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
 
   const [user, setUser] = useState("");
   useEffect(() => {

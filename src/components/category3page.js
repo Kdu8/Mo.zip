@@ -12,19 +12,12 @@ const SERVER_URL ="https://api.mo-zip.online/users/me";
 
 function Category1page() {
 
-  const [board, setBoard] = useState([]);
-  useEffect(() => {
-    axios
-      .get(BOARD_URL, { withCredentials: true })
-      .then((res) => {
-        res.data.map(ele => {
-          console.log(ele);
-          setBoard(ele);
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const [boardlist, setBoardList] = useState([]);
+  useEffect(()=>{
+    axios.get(BOARD_URL, {withCredentials: true})
+    .then((res) => {
+      setBoardList(res.data);
+    })
   }, []);
 
   const [user, setUser] = useState("");
@@ -42,7 +35,6 @@ function Category1page() {
   return (
     <div className={Category3.main}>
       <Mainheader user={user}/>
-      <Postbox board={board}/>
       <Link to={`/category1`}>
           <button className={Category3.category1}>운동</button>
         </Link>
@@ -60,7 +52,11 @@ function Category1page() {
       <Link to={`/write`}>
           <button className={main.btn}>Mo.zip 하기</button>
         </Link>
-      <Postbox />
+        {boardlist.map((ele)=>{
+        return (
+          <Postbox board={ele}/>
+        )
+      })}
     </div>
   );
 }
