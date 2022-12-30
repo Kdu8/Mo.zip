@@ -14,24 +14,22 @@ export default function Postbox({ board }) {
     const day = newexDate.getDate();
     return (
       <div className={board.id} id={board.body}>
-        <div className={postbox.postbox}>
-          <div className={postbox.postbox1}>
-            <Link to={`/postpage`} className={postbox.awidth}>
-              <p className={postbox.headline}>{board.title}</p>
-            </Link>
-            <p className={postbox.inline}>{board.content}</p>
-            <hr className={postbox.postdiv}></hr>
-            <p className={postbox.deadline}>마감일</p>
-            <p className={postbox.deadlinedate}>{`${year}년 ${
-              month + 1
-            }월 ${day}일`}</p>
-            <p className={postbox.postuser}>작성자</p>
-            <p className={postbox.postusername}>{board.writerName}</p>
-            <p
-              className={postbox.people}
-            >{`${board.applicantCount}/${board.maxApp}`}</p>
-            <button className={postbox.state}>{moziping}</button>
-          </div>
+        <div className={postbox.postbox1}>
+          <Link to={`/postpage`} className={postbox.awidth}>
+            <p className={postbox.headline}>{board.title}</p>
+          </Link>
+          <p className={postbox.inline}>{board.content}</p>
+          <hr className={postbox.postdiv}></hr>
+          <p className={postbox.deadline}>마감일</p>
+          <p className={postbox.deadlinedate}>{`${year}년 ${
+            month + 1
+          }월 ${day}일`}</p>
+          <p className={postbox.postuser}>작성자</p>
+          <p className={postbox.postusername}>{board.writerName}</p>
+          <p
+            className={postbox.people}
+          >{`${board.applicantCount}/${board.maxApp}`}</p>
+          <button className={postbox.state}>{moziping}</button>
         </div>
       </div>
     );
