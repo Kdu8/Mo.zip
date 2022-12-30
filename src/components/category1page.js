@@ -1,7 +1,6 @@
 import category1 from "./css/category1.module.css";
 import Mainheader from "./mainheader";
 import Postbox from "./postbox";
-import postboxcss from "./css/postbox.module.css";
 import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -55,7 +54,7 @@ function Category1page() {
       <Link to={`/write`}>
         <button className={main.btn}>Mo.zip 하기</button>
       </Link>
-      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "2rem", width:"900px", height:"250px"}}>
+      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "1.5rem", width:"900px", height:"250px"}}>
       {boardlist.map((ele)=>{
         return (
           <Postbox board={ele}/>
