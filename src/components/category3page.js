@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BOARD_URL = "https://api.mo-zip.online/boards?category=Purchase";
+const BOARD_URL = "https://api.mo-zip.online/boards?category=Purchase&size=4&sort=id,DESC&page=0";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
