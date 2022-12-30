@@ -11,7 +11,7 @@ export default function Postbox({board}) {
   const newexDate = new Date(board.exDate);
   const year = newexDate.getFullYear();
   const month = newexDate.getMonth();
-  const day = newexDate.getDay();
+  const day = newexDate.getDate();
   return (
     <div>
       <div className={postbox.postbox}>
@@ -23,7 +23,7 @@ export default function Postbox({board}) {
             </p>
             <hr className={postbox.postdiv}></hr>
             <p className={postbox.deadline}>마감일</p>
-            <p className={postbox.deadlinedate}>{`${year}년 ${month}월 ${day}일`}</p>
+            <p className={postbox.deadlinedate}>{`${year}년 ${month + 1}월 ${day}일`}</p>
             <p className={postbox.postuser}>작성자</p>
             <p className={postbox.postusername}>{board.writerName}</p>
             <p className={postbox.people}>{`${board.applicantCount}/${board.maxApp}`}</p>
