@@ -51,6 +51,7 @@ function Writepage() {
       )
       .then((res) => {
         console.log(res.data);
+        console.log(exDate);
         alert("글이 등록되었습니다.");
         replace(`/main`);
       })
