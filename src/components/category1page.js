@@ -55,7 +55,7 @@ function Category1page() {
       <Link to={`/write`}>
         <button className={main.btn}>Mo.zip 하기</button>
       </Link>
-      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "2rem"}}>
+      <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "2rem", width:"900px", height:"250px"}}>
       {boardlist.map((ele)=>{
         return (
           <Postbox board={ele}/>
