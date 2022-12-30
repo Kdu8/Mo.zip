@@ -13,7 +13,7 @@ export default function Postbox({board}) {
   const month = newexDate.getMonth();
   const day = newexDate.getDate();
   return (
-    <div>
+    <div className={postbox.postbody}>
       <div className={postbox.postbox}>
         <Link to={`/postpage`}>
           <div className={postbox.postbox1}>

@@ -1,8 +1,11 @@
-.postbox1 {
-  position: absolute;
+.postbody{
   display: grid;
-  width: 400px;
-  height: 250px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+}
+
+.postbox1 {
+  position: relative;
   border-radius: 10px;
   left: 38%;
   top: 20%;
