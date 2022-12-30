@@ -58,7 +58,7 @@ function Category1page() {
       <div style={{display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "2rem"}}>
       {boardlist.map((ele)=>{
         return (
-          <Postbox board={ele} className={postboxcss.postbox}/>
+          <Postbox board={ele}/>
         );
       })}
       </div>
