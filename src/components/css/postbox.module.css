@@ -10,13 +10,12 @@
   position: relative;
   width: 400px;
   height: 250px;
-  
-  border-radius: 10psx;
+  border-radius: 10px;
   background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
+  box-shadow: 0px 0px 5px 2.5px #201f1f34;
 }
 
-.awidth{
+.awidth {
   width: 400px;
   height: 250px;
 }
