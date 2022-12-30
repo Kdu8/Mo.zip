@@ -38,10 +38,13 @@ function Writepage() {
     e.preventDefault();
     const category = e.target.category.value;
     const content = e.target.content.value;
-    const exDate = new Date(e.target.exDate.value).toISOString();
+    let exDate = new Date(e.target.exDate.value);
     const maxApp = Number(e.target.maxApp.value);
     const title = e.target.title.value;
     const requirement = e.target.requirement.value;
+
+    exDate.setDate(exDate.getDate() + 1);
+    exDate = exDate.toISOString();
 
     await axios
       .post(
@@ -51,7 +54,6 @@ function Writepage() {
       )
       .then((res) => {
         console.log(res.data);
-        console.log(exDate);
         alert("글이 등록되었습니다.");
         replace(`/main`);
       })
@@ -105,7 +107,7 @@ function Writepage() {
               onChange={(date) => setEndDate(date)}
               selectsEnd
               endDate={endDate}
-              minDate={new Date()}
+              minDate={new Date().}
               dateFormat="yyyy/MM/dd"
               className={write.enddateinput}
               name="exDate"
