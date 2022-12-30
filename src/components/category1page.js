@@ -62,8 +62,8 @@ function Category1page() {
           rowGap: "1.8rem",
           width: "800px",
           height: "250px",
-          top: "-50%",
-          left: "100%",
+          top: "30%",
+          left: "50%",
         }}
       >
         {boardlist.map((ele) => {

@@ -59,7 +59,7 @@ function Category1page() {
           width: "800px",
           height: "250px",
           top: "30%",
-          left: "70%",
+          left: "50%",
         }}
       >
         {boardlist.map((ele) => {
