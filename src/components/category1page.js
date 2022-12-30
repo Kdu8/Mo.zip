@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 
-const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports";
+const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports&size=4&sort=id,DESC&page=0";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
