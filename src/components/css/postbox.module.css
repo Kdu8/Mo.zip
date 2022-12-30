@@ -1,40 +1,11 @@
 .postbox1 {
   position: absolute;
+  display: grid;
   width: 400px;
   height: 250px;
   border-radius: 10px;
   left: 38%;
   top: 20%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox2 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 68%;
-  top: 20%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox3 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 38%;
-  top: 58%;
-  background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 1px #00000034;
-}
-.postbox4 {
-  position: absolute;
-  width: 400px;
-  height: 250px;
-  border-radius: 10px;
-  left: 68%;
-  top: 58%;
   background-color: #b6c9f1;
   box-shadow: 0px 0px 5px 1px #00000034;
 }
@@ -72,7 +43,6 @@
   width: 330px;
   height: 2px;
   color: white;
-  display: grid;
 }
 .deadline {
   position: relative;
