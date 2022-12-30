@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
-  if(board.exDate !== undefined){
+  if(board !== undefined && board.exDate !== undefined){
   const newexDate = new Date(board.exDate);
   const year = newexDate.getFullYear();
   const month = newexDate.getMonth();
