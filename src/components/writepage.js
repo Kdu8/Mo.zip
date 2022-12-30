@@ -107,7 +107,7 @@ function Writepage() {
               onChange={(date) => setEndDate(date)}
               selectsEnd
               endDate={endDate}
-              minDate={new Date().}
+              minDate={new Date()}
               dateFormat="yyyy/MM/dd"
               className={write.enddateinput}
               name="exDate"
