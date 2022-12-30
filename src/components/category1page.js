@@ -20,6 +20,9 @@ function Category1page() {
           console.log(ele);
           setBoard(ele);
         });
+        res.data.map((board) => {
+          <Postbox board={board} />;
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -58,9 +61,6 @@ function Category1page() {
       <Link to={`/write`}>
         <button className={main.btn}>Mo.zip 하기</button>
       </Link>
-      {board.map((b) => {
-        <Postbox board={b} />;
-      })}
     </div>
   );
 }
