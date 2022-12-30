@@ -15,7 +15,7 @@ export default function Postbox({board}) {
   return (
     <div className={board.id} id={board.body}>
       <div className={postbox.postbox}>
-        <Link to={`/postpage`}>
+        <Link to={`/postpage`} className={postbox.awidth}>
           <div className={postbox.postbox1}>
             <p className={postbox.headline}>{board.title}</p>
             <p className={postbox.inline}>
