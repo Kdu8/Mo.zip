@@ -52,11 +52,7 @@ function Category1page() {
   return (
     <div className={category1.main}>
       <Mainheader user={user} />
-      {boardlist.map((ele)=>{
-        return (
-          <Postbox board={ele}/>
-        )
-      })}
+      
       <Link to={`/category1`}>
         <button className={category1.category1}>운동</button>
       </Link>
@@ -74,6 +70,11 @@ function Category1page() {
       <Link to={`/write`}>
         <button className={main.btn}>Mo.zip 하기</button>
       </Link>
+      {boardlist.map((ele)=>{
+        return (
+          <Postbox board={ele}/>
+        )
+      })}
     </div>
   );
 }
