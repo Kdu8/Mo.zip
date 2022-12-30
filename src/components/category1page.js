@@ -1,4 +1,3 @@
-
 import category1 from "./css/category1.module.css";
 import Mainheader from "./mainheader";
 import Postbox from "./postbox";
@@ -11,15 +10,13 @@ const BOARD_URL = "https://api.mo-zip.online/boards?category=Sports";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
-
-
   const [board, setBoard] = useState("");
   useEffect(() => {
     axios
       .get(BOARD_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
-        res.data.map(ele => {
+        res.data.map((ele) => {
           console.log(ele);
           setBoard(ele);
         });
@@ -28,7 +25,6 @@ function Category1page() {
         console.log(err);
       });
   }, []);
-
 
   const [user, setUser] = useState("");
   useEffect(() => {
@@ -44,25 +40,27 @@ function Category1page() {
   }, []);
   return (
     <div className={category1.main}>
-      <Mainheader user={user}/>
-      <Postbox board={board}/>
+      <Mainheader user={user} />
       <Link to={`/category1`}>
-          <button className={category1.category1}>운동</button>
-        </Link>
-        <Link to={`/category2`}>
-          <button className={category1.category2}>프로젝트</button>
-        </Link>
-        <Link to={`/category3`}>
-          <button className={category1.category3}>공동구매</button>
-        </Link>
+        <button className={category1.category1}>운동</button>
+      </Link>
+      <Link to={`/category2`}>
+        <button className={category1.category2}>프로젝트</button>
+      </Link>
+      <Link to={`/category3`}>
+        <button className={category1.category3}>공동구매</button>
+      </Link>
       <h1 className={main.find}>
-          내가 찾던 파트너와
-          <br />
-          함께하세요!
-        </h1>
+        내가 찾던 파트너와
+        <br />
+        함께하세요!
+      </h1>
       <Link to={`/write`}>
-          <button className={main.btn}>Mo.zip 하기</button>
-        </Link>
+        <button className={main.btn}>Mo.zip 하기</button>
+      </Link>
+      {board.map((b) => {
+        <Postbox board={b} />;
+      })}
     </div>
   );
 }
