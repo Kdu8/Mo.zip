@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 export default function Postbox({board}) {
   if(board !== undefined && board.exDate !== undefined){
+    let moziping = "Mo.zip";
+    if(board.finished){
+      moziping = "마감완료";
+    }
   const newexDate = new Date(board.exDate);
   const year = newexDate.getFullYear();
   const month = newexDate.getMonth();
@@ -23,7 +27,7 @@ export default function Postbox({board}) {
             <p className={postbox.postuser}>작성자</p>
             <p className={postbox.postusername}>{board.writerName}</p>
             <p className={postbox.people}>{`${board.applicantCount}/${board.maxApp}`}</p>
-            <button className={postbox.state}>마감완료</button>
+            <button className={postbox.state}>{moziping}</button>
           </div>
         </Link>
         <div className={postbox.postbox2}>
