@@ -12,10 +12,10 @@ export default function Postbox({ board }) {
     const year = newexDate.getFullYear();
     const month = newexDate.getMonth();
     const day = newexDate.getDate();
-    
+
     return (
       <div className={board.body}>
-        <div className={board.id}>
+        <div className={board.id} style={{width:"400px", height:"250px"}}>
           <div className={postbox.postbox}>
             <Link to={`/postpage`} className={postbox.awidth}>
               <p className={postbox.headline}>{board.title}</p>

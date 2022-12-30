@@ -5,10 +5,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-.body{
-  width: 400px;
-  height: 250px;
-}
+
 .postbox {
   position: relative;
   width: 400px;
