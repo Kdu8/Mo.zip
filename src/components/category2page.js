@@ -3,20 +3,18 @@ import Mainheader from "./mainheader";
 import Postbox from "./postbox";
 import main from "./css/main.module.css";
 import { Link } from "react-router-dom";
-import  axios  from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 const BOARD_URL = "https://api.mo-zip.online/boards?category=Project";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
-
   const [boardlist, setBoardList] = useState([]);
-  useEffect(()=>{
-    axios.get(BOARD_URL, {withCredentials: true})
-    .then((res) => {
+  useEffect(() => {
+    axios.get(BOARD_URL, { withCredentials: true }).then((res) => {
       setBoardList(res.data);
-    })
+    });
   }, []);
 
   const [user, setUser] = useState("");
@@ -52,11 +50,20 @@ function Category1page() {
       <Link to={`/write`}>
         <button className={main.btn}>Mo.zip 하기</button>
       </Link>
-      {boardlist.map((ele)=>{
-        return (
-          <Postbox board={ele}/>
-        )
-      })}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          columnGap: "1.8rem",
+          rowGap: "1.8rem",
+          width: "800px",
+          height: "250px",
+        }}
+      >
+        {boardlist.map((ele) => {
+          return <Postbox board={ele} />;
+        })}
+      </div>
     </div>
   );
 }

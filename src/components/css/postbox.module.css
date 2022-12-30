@@ -10,6 +10,8 @@
   position: relative;
   width: 400px;
   height: 250px;
+  top: -20%;
+  left: 50%;
   border-radius: 10px;
   background-color: #b6c9f1;
   box-shadow: 0px 0px 5px 1px #00000034;
