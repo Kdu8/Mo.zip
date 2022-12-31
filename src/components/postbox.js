@@ -1,8 +1,10 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 export default function Postbox({ board }) {
+  const navigate = useNavigate();
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
     if (board.finished) {
@@ -12,11 +14,12 @@ export default function Postbox({ board }) {
     const year = newexDate.getFullYear();
     const month = newexDate.getMonth();
     const day = newexDate.getDate();
-
-    const BOARD_LINK = "https://api.mo-zip.online/boards/{id}"
+    
     return (
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
-        <Link to={`/postpage`} className={postbox.awidth}>
+        <div onClick={() => {
+          navigate(`/postpage${board.id}`);
+        }} className={postbox.awidth}>
           <div className={postbox.postbox}>
             <p className={postbox.headline}>{board.title}</p>
 
@@ -33,7 +36,7 @@ export default function Postbox({ board }) {
             >{`${board.applicantCount}/${board.maxApp}`}</p>
             <button className={postbox.state}>{moziping}</button>
           </div>
-        </Link>
+        </div>
       </div>
     );
   }

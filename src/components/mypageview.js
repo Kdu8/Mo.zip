@@ -41,9 +41,11 @@ function Mypage() {
       <section className={mypage.contentbox}>
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
+          <div className={mypage.listtitle}>
           {userboard.map((ele) => {
-          return <Userboardlist board={ele} />;
-        })}
+            return <Userboardlist board={ele} />;
+          })}
+          </div>
           <div className={mypage.navigate}>
             <span className="material-symbols-outlined" id={mypage.backarrow}>
               arrow_back_ios

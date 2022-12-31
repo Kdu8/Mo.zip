@@ -1,12 +1,12 @@
 import React from 'react';
-import mypage from ".css/mypage.module.css"
+import mypage from "./css/mypage.module.css";
 
-const userboardlist = ({userboard}) => {
+const userboardlist = ({board}) => {
     return (
         <div>
             <div className={mypage.listbox}>
             <div className={mypage.listtitle}>
-              {userboard.title}
+              {board.title}
             </div>
             <button className={mypage.editbtn} id={mypage.button}>
               수정
