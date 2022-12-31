@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function Postbox({ board }) {
   const navigate = useNavigate();
-  const BOARD_URL = board.id;
+  const BOARD_URL = "https://mo-zip."board.id;
   console.log(BOARD_URL);
   const [boardid, setBoardid] = useState();
   useEffect(() => {
@@ -26,10 +26,8 @@ export default function Postbox({ board }) {
     const day = newexDate.getDate();
     return (
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
-        <div
-          onClick={() => {
-            navigate(`/${board.id}`);
-          }}
+        <Link
+         to={`/postpage`}
           className={postbox.awidth}
         >
           <div className={postbox.postbox}>
@@ -48,7 +46,7 @@ export default function Postbox({ board }) {
             >{`${board.applicantCount}/${board.maxApp}`}</p>
             <button className={postbox.state}>{moziping}</button>
           </div>
-        </div>
+        </Link>
       </div>
     );
   }
