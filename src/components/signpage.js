@@ -67,7 +67,8 @@ export default function Signpage() {
             placeholder="디스코드 닉네임"
             className={signup.nickname}
           />
-          <input name="tag" placeholder="#" className={signup.tag} />
+          <p className={signup.tagcheck}>#</p>
+          <input name="tag" placeholder="1234" className={signup.tag} />
           <div className={signup.checkboxmom}>
             <input type="checkbox" id="check" className={signup.agreebox} />
             <label for="check" className={signup.agree}>

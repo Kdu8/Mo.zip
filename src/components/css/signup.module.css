@@ -88,16 +88,23 @@ transform: translate(-1%, 5%);
   color: #b8b1b1;
   font-size: 14px;
   font-weight: 500;
-  transform: translate(-5%, 5%);
+  transform: translate(0%, 5%);
 }
 .tag{
-  width: 130px;
+  width: 110px;
   height: 50px;
   border-radius: 5px;
   border: 0.3px solid #aaaaaa;
   position: absolute;
-  transform: translate(197%, 580%);
+  transform: translate(250%, 580%);
   padding-left: 20px;
+}
+.tagcheck{
+  position: absolute;
+  color: #b8b1b1;
+  font-size: 14px;
+  font-weight: 500;
+  transform: translate(2850%, 1830%);
 }
 .submit{
   font-weight: 700;
