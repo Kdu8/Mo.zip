@@ -10,6 +10,12 @@ export default function Postbox({ board }) {
   const BOARD_URL = "https://api.mo-zip.online/boards/";
   const BOARDID_URL = BOARD_URL + board.id;
   console.log(BOARDID_URL);
+  const [boardid, setBoardid] = useState();
+  useEffect(() => {
+    axios.get(BOARDID_URL, { withCredentials: true }).then(res=>{
+      console.log(res.data);
+    });
+  }, []);
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
     if (board.finished) {
@@ -23,7 +29,7 @@ export default function Postbox({ board }) {
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
         <div
           onClick={() => {
-            navigate();
+            navigate(BOARDID_URL);
           }}
           className={postbox.awidth}
         >
