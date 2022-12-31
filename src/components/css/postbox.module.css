@@ -24,6 +24,7 @@
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
   top: 25px;
   left: 30px;
   font-size: 26px;
