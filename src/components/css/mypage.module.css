@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+.body {
+  width: 100%;
+  font-family: "Inter" sans-serif;
+  position: relative;
+}
+
+#button {
+  background-color: #7ea0e5;
+  padding: 6px 17px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #7ea0e5;
+  transition: 0.4s;
+  color: #fff;
+}
+
+#button:hover {
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid #7ea0e5;
+  color: #7ea0e5;
+}
+
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.user {
+  height: 130px;
+}
+
+.user > .inner {
+  position: absolute;
+  top: 55%;
+  left: 110px;
+  display: flex;
+  padding-left: 30px;
+}
+
+.user .userName {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.user .userHi {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.contentbox {
+  display: flex;
+  width: 80%;
+  position: absolute;
+  left: 9%;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  color: #17469b;
+  position: absolute;
+  top: 6%;
+  left: 6%;
+}
+
+.writing {
+  background-color: #d7e3fb;
+  width: 670px;
+  height: 500px;
+  border-radius: 16px;
+  position: relative;
+  margin-top: -4%;
+  box-shadow: 5px 5px 10px 5px #dbdcde;
+}
+
+.listbox {
+  background-color: #fff;
+  width: 90%;
+  height: 11%;
+  border-radius: 6px;
+  display: flex;
+  position: absolute;
+  top: 17%;
+  left: 5%;
+}
+
+.listbox .listtitle {
+  font-weight: 600;
+  font-size: 17px;
+  position: absolute;
+  top: 37%;
+  left: 4%;
+}
+
+.listbox .editbtn {
+  position: absolute;
+  top: 28%;
+  right: 17%;
+}
+
+.listbox .removebtn {
+  position: absolute;
+  top: 28%;
+  right: 3%;
+}
+
+.apply {
+  background-color: #d7e3fb;
+  width: 670px;
+  height: 500px;
+  border-radius: 16px;
+  position: relative;
+  margin-left: 50px;
+  margin-top: -4%;
+  box-shadow: 5px 5px 10px 5px #dbdcde;
+}
+
+.contentbox .navigate {
+  display: flex;
+  position: absolute;
+  top: 94%;
+  left: 45%;
+}
+
+.number{
+    position: absolute;
+    font-size: 20px;
+    left: 33%;
+}
+
+.contentbox .navigate .material-symbols-outlined {
+  cursor: pointer;
+}
