@@ -1,20 +1,21 @@
 import mypage from "./css/mypage.module.css";
 import Mainheader from "./mainheader";
 import { useState, useEffect } from "react";
+import Userboardlist from "./userboardlist";
 import axios from "axios";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Mypage() {
   const [user, setUser] = useState("");
-  const [userident, setUserident] = useState("");
+  const [userboard, setUserboard] = useState("");
   useEffect(() => {
     axios
       .get(SERVER_URL, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         setUser(res.data.user.name);
-        setUserident(res.data);
+        setUserboard(res.data.myBoards);
       })
       .catch((err) => {
         console.log(err);
@@ -40,17 +41,9 @@ function Mypage() {
       <section className={mypage.contentbox}>
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
-          <div className={mypage.listbox}>
-            <div className={mypage.listtitle}>
-              Mo.zip 프로젝트 팀원을 모집합니다!
-            </div>
-            <button className={mypage.editbtn} id={mypage.button}>
-              수정
-            </button>
-            <button className={mypage.removebtn} id={mypage.button}>
-              삭제
-            </button>
-          </div>
+          {userboard.map((ele) => {
+          return <Userboardlist board={ele} />;
+        })}
           <div className={mypage.navigate}>
             <span className="material-symbols-outlined" id={mypage.backarrow}>
               arrow_back_ios
