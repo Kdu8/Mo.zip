@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Postbox({ board }) {
-  const BOARDID_URL = "https://api.mo-zip.online/boards/{`${board.id}`}";
+  const BOARDID_URL = "https://api.mo-zip.online/boards/${board.id}";
   const navigate = useNavigate();
   const [boardid, setBoardid] = useState();
   useEffect(() => {
