@@ -6,15 +6,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Postbox({ board }) {
-  const BOARDID_URL = "https://api.mo-zip.online/boards/${board.id}";
   const navigate = useNavigate();
-  const [boardid, setBoardid] = useState();
-  useEffect(() => {
-    axios.get(BOARDID_URL, { withCredentials: true }).then((res) => {
-      console.log(res.data);
-      setBoardid(res.data);
-    });
-  }, []);
+  const BOARD_URL = "https://api.mo-zip.online/boards/";
+  const BOARDID_URL = BOARD_URL + board.id;
+  console.log(BOARDID_URL);
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
     if (board.finished) {
