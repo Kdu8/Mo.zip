@@ -12,13 +12,12 @@
   height: 250px;
   border-radius: 10px;
   background-color: #b6c9f1;
-  box-shadow: 0px 0px 5px 2.5px #201f1f34;
+  box-shadow: 0px 0px 5px 1.5px #201f1f34;
 }
 
 .awidth {
   width: 400px;
   height: 250px;
-  cursor: pointer;
 }
 
 .headline {
