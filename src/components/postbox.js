@@ -28,7 +28,7 @@ export default function Postbox({ board }) {
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
         <div
           onClick={() => {
-            navigate(BOARD_URL);
+            navigate(`/${board.id}`);
           }}
           className={postbox.awidth}
         >
