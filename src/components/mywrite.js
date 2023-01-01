@@ -21,9 +21,6 @@ const Mywrite = ({ write }) => {
   return (
     <div className={mypage.listbox}>
       <div className={mypage.listtitle}>{write.title}</div>
-      <button className={mypage.editbtn} id={mypage.button}>
-        수정
-      </button>
       <button className={mypage.removebtn} onClick={Delete} id={mypage.button}>
         삭제
       </button>
