@@ -12,7 +12,10 @@ const Mywrite = ({ write }) => {
       })
       .then((res) => {
         alert("삭제 성공");
-        replace(`/mypage`);
+        window.location.reload();
+      }).catch((err)=>{
+        alert("삭제 실패");
+        window.location.reload();
       });
   };
   return (
