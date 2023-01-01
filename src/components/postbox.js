@@ -6,7 +6,7 @@ import axios from "axios";
 
 export default function Postbox({ board }) {
 
-  if (board !== undefined && board.exDate !== undefined) {
+  if (board?.exDate) {
     let moziping = "Mo.zip";
     if (board.finished) {
       moziping = "마감완료";

@@ -8,7 +8,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function Postpage() {
-  const {id} = useParams();
+  const { id } = useParams();
   const [board, setBoard] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
@@ -16,16 +16,18 @@ export default function Postpage() {
 
   const [boardget, setBoardget] = useState();
   useEffect(() => {
-    axios.get("https://api.mo-zip.online/boards/"+id).then(res => {
+    axios.get("https://api.mo-zip.online/boards/" + id).then((res) => {
       console.log(res.data);
       setBoardget(res.data);
-    })
+    });
   }, []);
 
   const ApplySubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://api.mo-zip.online/boards/"+id+"/toggle-apply", { withCredentials: true })
+      .post("https://api.mo-zip.online/boards/" + id + "/toggle-apply", {
+        withCredentials: true,
+      })
       .then((res) => {
         alert("신청되었습니다.");
         navigate(`/main`);
@@ -34,11 +36,12 @@ export default function Postpage() {
         alert("신청 실패");
       });
   };
+  if (boardget?.board?.exDate) {
 
   const newexDate = new Date(boardget.board.exDate);
-    const year = newexDate.getFullYear();
-    const month = newexDate.getMonth();
-    const day = newexDate.getDate();
+  const year = newexDate.getFullYear();
+  const month = newexDate.getMonth();
+  const day = newexDate.getDate();
   return (
     <div className={postpage.body}>
       <Mainheader />
@@ -46,13 +49,11 @@ export default function Postpage() {
       <div className={postpage.postcontainer}>
         <p className={postpage.title}>{boardget.board.title}</p>
         <p className={postpage.name}>작성자: {boardget.writerName}</p>
-        <p className={postpage.exDate}>마감일 : {`${year}년 ${
-              month + 1
-            }월 ${day}일`}</p>
-        <p className={postpage.maxApp}>모집인원 : {boardget.board.maxApp}</p>
-        <p className={postpage.content}>
-          {boardget.board.content}
+        <p className={postpage.exDate}>
+          마감일 : {`${year}년 ${month + 1}월 ${day}일`}
         </p>
+        <p className={postpage.maxApp}>모집인원 : {boardget.board.maxApp}</p>
+        <p className={postpage.content}>{boardget.board.content}</p>
         <p className={postpage.need}>{boardget.board.requirement}</p>
         <div className={postpage.userslist}>
           <p className={postpage.nowlist}>신청목록이 궁금하신가요?</p>
@@ -77,4 +78,5 @@ export default function Postpage() {
       </div>
     </div>
   );
+}
 }
