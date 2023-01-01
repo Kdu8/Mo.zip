@@ -1,7 +1,6 @@
 import mypage from "./css/mypage.module.css";
 import Mainheader from "./mainheader";
 import { useState, useEffect } from "react";
-import Userboardlist from "./userboardlist";
 import axios from "axios";
 import Mywrite from "./mywrite";
 import Myapply from "./myapply";

@@ -7,7 +7,7 @@ import Category1 from "./routes/category1";
 import Category2 from "./routes/category2";
 import Category3 from "./routes/category3";
 import Check from "./routes/check";
-import Userlist from "./components/userlist";
+import Editpost from "./components/editpost";
 import { Routes } from "react-router";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Postpageview from "./routes/postpageview";
@@ -28,6 +28,7 @@ function App() {
         <Route path="/check" element={<Check />} />
         <Route path="/board/:id" element={<Postpageview />} />
         <Route path="/mypage" element={<Mypage />} />
+        <Route path="/editpost/" element={<Editpost />}/>
       </Routes>
     </Router>
   );
