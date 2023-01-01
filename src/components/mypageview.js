@@ -16,12 +16,12 @@ function Mypage() {
         console.log(res.data);
         setUser(res.data.user.name);
         setUserboard(res.data.myBoards);
-        console.log(userboard);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
+  console.log(userboard);
   return (
     <div className={mypage.body}>
       <Mainheader user={user} />
@@ -44,18 +44,6 @@ function Mypage() {
           <div className={mypage.title}>작성글</div>
           <div className={mypage.listtitle}>
           </div>
-          <div className={mypage.navigate}>
-            <span className="material-symbols-outlined" id={mypage.backarrow}>
-              arrow_back_ios
-            </span>
-            <div className={mypage.number}> 1 </div>
-            <span
-              className="material-symbols-outlined"
-              id={mypage.forwardarrow}
-            >
-              arrow_forward_ios
-            </span>
-          </div>
         </section>
 
         <section className={mypage.apply}>
@@ -70,18 +58,6 @@ function Mypage() {
             <button className={mypage.removebtn} id={mypage.button}>
               삭제
             </button>
-          </div>
-          <div className={mypage.navigate}>
-            <span className="material-symbols-outlined" id={mypage.backarrow}>
-              arrow_back_ios
-            </span>
-            <div className={mypage.number}> 1 </div>
-            <span
-              className="material-symbols-outlined"
-              id={mypage.forwardarrow}
-            >
-              arrow_forward_ios
-            </span>
           </div>
         </section>
       </section>
