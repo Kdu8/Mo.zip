@@ -92,7 +92,7 @@
   left: 5%;
 }
 
-.listbox .listtitle {
+.listtitle {
   font-weight: 600;
   font-size: 17px;
   position: absolute;
@@ -100,13 +100,13 @@
   left: 4%;
 }
 
-.listbox .editbtn {
+.editbtn {
   position: absolute;
   top: 28%;
   right: 17%;
 }
 
-.listbox .removebtn {
+.removebtn {
   position: absolute;
   top: 28%;
   right: 3%;
