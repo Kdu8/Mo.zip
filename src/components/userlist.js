@@ -9,7 +9,7 @@ const userlist = ({ userlist }) => {
           {userlist.map((ele) => {
             return (
               <li>
-                {ele.name}/{ele.discord}/{ele.email}
+                {ele.name}/{ele.discord}
               </li>
             );
           })}

@@ -126,23 +126,28 @@
   width: 20px;
 }
 .usercontainer {
-  width: 400px;
-  height: 650px;
-  border-radius: 10px;
-  position: absolute;
-  top: 20%;
-  left: 50%;
   background-color: #b6c9f1;
+  border-radius: 10px;
+  height: 350px;
+  left: 102%;
+  position: absolute;
+  top: 0%;
+  width: 200px;
+  box-shadow: 0px 0px 5px 1px #00000034;
 }
 .list {
   position: relative;
-  font-size: 32px;
+  font-size: 26px;
+  left: 20%;
+  top: 5%;
   font-weight: 600;
   color: white;
 }
 .user {
   position: relative;
   display: flex;
+  font-size: 18px;
+  font-weight: 500;
   flex-direction: column;
   margin-bottom: 4%;
 }
