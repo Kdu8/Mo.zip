@@ -1,6 +1,16 @@
-.container{
-    width: 400px;
+.container {
+  width: 400px;
   height: 650px;
   border-radius: 10px;
-  background-color: #B6C9F1;
+  background-color: #b6c9f1;
+}
+.list {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
 }

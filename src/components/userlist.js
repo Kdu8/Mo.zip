@@ -1,10 +1,11 @@
 import React from 'react';
-import userList from "userlist.module.css";
+import userList from "./css/userlist.module.css";
 
 const userlist = ({userlist}) => {
     return (
         <div className={userList.container}>
-            <ul>
+            <p className={userList.list}>신청자 목록</p>
+            <ul className={userList.user}>
                 {userlist.map((ele)=>{
                     return <li>{ele.name}/{ele.discord}</li>
                 })}
