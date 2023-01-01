@@ -61,13 +61,23 @@ export default function Postpage() {
         <div className={postpage.titlebox}>
         <p className={postpage.title}>{boardget.board.title}</p>
         </div>
+        <div className={postpage.writerbox}>
         <p className={postpage.name}>작성자: {boardget.writerName}</p>
+        </div>
+        <div className={postpage.exDatebox}>
         <p className={postpage.exDate}>
           마감일 : {`${year}년 ${month + 1}월 ${day}일`}
         </p>
+        </div>
+        <div className={postpage.maxAppbox}>
         <p className={postpage.maxApp}>모집인원 : {boardget.board.maxApp}</p>
+        </div>
+        <div className={postpage.contentbox}>
         <p className={postpage.content}>{boardget.board.content}</p>
+        </div>
+        <div className={postpage.needbox}>
         <p className={postpage.need}>{boardget.board.requirement}</p>
+        </div>
         <Userlist userlist={boardget.users}/>
       </div>
       <div className={postpage.arrowmain}>

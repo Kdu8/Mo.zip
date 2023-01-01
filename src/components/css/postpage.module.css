@@ -43,7 +43,7 @@
   font-size: 36px;
   font-weight: 600;
   position: relative;
-  top: 5%;
+  top: 25%;
   left: 3%;
 }
 .name {
@@ -157,9 +157,21 @@
   top: 45px;
   left: 40px;
 }
-.titlebox{
+.titlebox {
   width: 900px;
   height: 100px;
   background-color: #ffffff;
   border-radius: 9px;
+  position: absolute;
+  top: 4%;
+  left: 2%;
+}
+.writerbox{
+  width: 160px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  top: 8%;
+  left: 2%;
 }
