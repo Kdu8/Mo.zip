@@ -65,10 +65,10 @@
 .maxApp {
   font-size: 20px;
   font-weight: 600;
-  position: relative;
+  position: absolute;
   top: -2%;
   left: 43%;
-  width: 300px;
+  width: 160px;
 }
 .content {
   font-size: 23px;
@@ -192,4 +192,16 @@
   position: absolute;
   top: 25%;
   left: 60%;
+}
+.contentbox{
+  width: 900px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  top: 40%;
+  left: 2%;
+}
+.needbox{
+
 }
