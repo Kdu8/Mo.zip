@@ -14,12 +14,9 @@ export default function Postpage() {
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+
   useEffect(() => {
-    const getboard = async () => {
-      const {data} =await axios.get(`/boards/${board_id}`, { withCredentials: true });
-      return data;
-    }
-    getboard().then(result => setBoard(result)).then(() => setIsLoaded(true));
+    axios.get("https://api.mo-zip.online/boards/"+board.id)
   }, []);
 
   const ApplySubmit = async (e) => {

@@ -1,24 +1,18 @@
 import postbox from "./css/postbox.module.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Postbox({ board }) {
 
-  const navigate = useNavigate();
-
-  const BOARD_URL = "https://mo-zip.online/" + board.id;
-
-  console.log(BOARD_URL);
   const [boardid, setBoardid] = useState();
-
-  useEffect(() => {
-    axios.get(BOARD_URL, { withCredentials: true }).then((res) => {
-      console.log(res.data);
-    });
-  }, []);
+  useEffect(()=>{
+    axios.get("https://api.mo-zip.online/boards/"+board.id).then(res=>{
+      setBoardid(res.data.id);
+      console.log(setBoardid)
+    })
+  })
 
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
@@ -33,7 +27,7 @@ export default function Postbox({ board }) {
     return (
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
 
-        <Link to={`/board/${board.id}`} className={postbox.awidth}>
+        <Link to={`/boards/${board.id}`} className={postbox.awidth} boardid={board}>
           <div className={postbox.postbox}>
             <p className={postbox.headline}>{board.title}</p>
 
