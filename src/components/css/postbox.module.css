@@ -67,7 +67,7 @@
 }
 .deadlinedate {
   position: absolute;
-  top: 153px;
+  top: 175px;
   left: 90px;
   font-size: 16px;
   font-weight: 500;
@@ -75,7 +75,7 @@
 }
 .postuser {
   position: absolute;
-  top: 100px;
+  top: 205px;
   left: 30px;
   font-size: 16px;
   font-weight: 600;
@@ -83,7 +83,7 @@
 }
 .postusername {
   position: absolute;
-  top: 109px;
+  top: 205px;
   left: 90px;
   font-size: 16px;
   font-weight: 500;
@@ -92,7 +92,7 @@
 .people {
   position: absolute;
   width: 20px;
-  top: 80px;
+  top: 175px;
   left: 340px;
   font-size: 12px;
   font-weight: 500;
@@ -100,7 +100,7 @@
 }
 .state {
   position: absolute;
-  top: 80px;
+  top: 205px;
   left: 300px;
   width: 65px;
   height: 25px;
