@@ -4,8 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 .postcontainer {
   width: 1000px;
@@ -151,7 +149,7 @@
   flex-direction: column;
   margin-bottom: 4%;
 }
-.name {
+.namelist {
   position: relative;
   font-size: 18px;
   font-weight: 500;

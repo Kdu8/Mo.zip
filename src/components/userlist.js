@@ -8,7 +8,7 @@ const userlist = ({ userlist }) => {
         <ul className={postpage.user}>
           {userlist.map((ele) => {
             return (
-              <li className={postpage.name}>
+              <li className={postpage.namelist}>
                 {ele.name}
               </li>
             );
