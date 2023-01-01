@@ -58,8 +58,8 @@
   font-size: 20px;
   font-weight: 600;
   position: relative;
-  top: 3%;
-  left: 19%;
+  top: 15%;
+  left: 5%;
   width: 300px;
 }
 .maxApp {
@@ -181,6 +181,15 @@
   background-color: #ffffff;
   border-radius: 9px;
   position: absolute;
-  top: 28%;
+  top: 25%;
   left: 40%;
+}
+.maxAppbox{
+  width: 160px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  top: 25%;
+  left: 60%;
 }
