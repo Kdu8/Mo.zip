@@ -20,6 +20,9 @@ const Myapply = ({ apply }) => {
   return (
     <div className={mypage.listbox}>
       <div className={mypage.listtitle}>{apply.title}</div>
+      <button className={mypage.editbtn} id={mypage.button}>
+        수정
+      </button>
       <button className={mypage.removebtn} onClick={Apply} id={mypage.button}>
         취소
       </button>
