@@ -50,7 +50,7 @@
   white-space: pre-line;
 }
 .postdiv {
-  position: relative;
+  position: absolute;
   top: 65px;
   left: 30px;
   width: 330px;
@@ -58,7 +58,7 @@
   color: white;
 }
 .deadline {
-  position: relative;
+  position: absolute;
   top: 75px;
   left: 30px;
   font-size: 16px;
@@ -66,7 +66,7 @@
   color: white;
 }
 .deadlinedate {
-  position: relative;
+  position: absolute;
   top: 53px;
   left: 90px;
   font-size: 16px;
@@ -74,7 +74,7 @@
   color: white;
 }
 .postuser {
-  position: relative;
+  position: absolute;
   top: 60px;
   left: 30px;
   font-size: 16px;
@@ -82,7 +82,7 @@
   color: white;
 }
 .postusername {
-  position: relative;
+  position: absolute;
   top: 39px;
   left: 90px;
   font-size: 16px;
@@ -90,7 +90,7 @@
   color: white;
 }
 .people {
-  position: relative;
+  position: absolute;
   width: 20px;
   top: -8px;
   left: 340px;
@@ -99,7 +99,7 @@
   color: white;
 }
 .state {
-  position: relative;
+  position: absolute;
   top: 2px;
   left: 300px;
   width: 65px;

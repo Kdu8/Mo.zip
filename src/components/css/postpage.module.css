@@ -84,6 +84,7 @@
   font-size: 18px;
   top: 79%;
   left: 3%;
+  position: absolute;
   white-space: pre-line;
 }
 .apply {
