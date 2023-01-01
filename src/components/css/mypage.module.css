@@ -83,13 +83,13 @@
 
 .listbox {
   background-color: #fff;
-  width: 90%;
-  height: 11%;
   border-radius: 6px;
-  position: relative;
-  top: 17%;
+  height: 55px;
   left: 5%;
   margin-bottom: 4%;
+  position: relative;
+  top: 90px;
+  width: 90%;
 }
 
 .listtitle {
@@ -130,10 +130,10 @@
   left: 45%;
 }
 
-.number{
-    position: absolute;
-    font-size: 20px;
-    left: 33%;
+.number {
+  position: absolute;
+  font-size: 20px;
+  left: 33%;
 }
 
 .contentbox .navigate .material-symbols-outlined {
