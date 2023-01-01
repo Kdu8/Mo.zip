@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Userboardlist from "./userboardlist";
 import axios from "axios";
 import Mywrite from "./mywrite";
+import Myapply from "./myapply";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Mypage() {
   const [user, setUser] = useState("");
   const [userboard, setUserboard] = useState([]);
+  const [userapply, setUserapply] = useState([]);
   useEffect(() => {
     axios
       .get(SERVER_URL, { withCredentials: true })
@@ -17,6 +19,7 @@ function Mypage() {
         console.log(res.data);
         setUser(res.data.user.name);
         setUserboard(res.data.myBoards);
+        setUserapply(res.data.myApplyBoards);
       })
       .catch((err) => {
         console.log(err);
@@ -52,16 +55,10 @@ function Mypage() {
 
         <section className={mypage.apply}>
           <div className={mypage.title}>신청 목록</div>
-          <div className={mypage.listbox}>
-            <div className={mypage.listtitle}>
-              기숙사에서 먹을 간식 공동 구매 할 사람
-            </div>
-            <button className={mypage.editbtn} id={mypage.button}>
-              보기
-            </button>
-            <button className={mypage.removebtn} id={mypage.button}>
-              삭제
-            </button>
+          <div style={{display:"flex", flexDirection:"column"}}>
+          {userapply.map((ele) => {
+            return <Myapply apply={ele} />;
+          })}
           </div>
         </section>
       </section>
