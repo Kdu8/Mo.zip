@@ -50,9 +50,9 @@
   font-size: 20px;
   font-weight: 600;
   position: relative;
-  top: 8%;
-  left: 3%;
-  width: 300px;
+  top: 18%;
+  left: 9%;
+  width: 160px;
 }
 .exDate {
   font-size: 20px;
@@ -168,10 +168,19 @@
 }
 .writerbox{
   width: 160px;
-  height: 30px;
+  height: 40px;
   background-color: #ffffff;
   border-radius: 9px;
   position: absolute;
-  top: 8%;
+  top: 28%;
   left: 2%;
+}
+.exDatebox{
+  width: 240px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  top: 28%;
+  left: 6%;
 }
