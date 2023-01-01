@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
-const SERVER_URL = "https://api.mo-zip.online/boards/";
 export default function Postpage() {
   const {id} = useParams();
   const [board, setBoard] = useState({});
@@ -15,17 +14,18 @@ export default function Postpage() {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
 
+  const [boardget, setBoardget] = useState();
   useEffect(() => {
-    console.log(id);
     axios.get("https://api.mo-zip.online/boards/"+id).then(res => {
-      console.log(res.data)
+      console.log(res.data);
+      setBoardget(res.data);
     })
   }, []);
 
   const ApplySubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post(SERVER_URL, { withCredentials: true })
+      .post("https://api.mo-zip.online/boards/"+id+"/toggle-apply", { withCredentials: true })
       .then((res) => {
         alert("신청되었습니다.");
         navigate(`/main`);
@@ -34,25 +34,26 @@ export default function Postpage() {
         alert("신청 실패");
       });
   };
+
+  const newexDate = new Date(boardget.board.exDate);
+    const year = newexDate.getFullYear();
+    const month = newexDate.getMonth();
+    const day = newexDate.getDate();
   return (
     <div className={postpage.body}>
       <Mainheader />
 
       <div className={postpage.postcontainer}>
-        <p className={postpage.title}>제목</p>
-        <p className={postpage.name}>작성자: 한준</p>
-        <p className={postpage.exDate}>마감일 : yyyy/mm/dd</p>
-        <p className={postpage.maxApp}>모집인원 : 2</p>
+        <p className={postpage.title}>{boardget.board.title}</p>
+        <p className={postpage.name}>작성자: {boardget.writerName}</p>
+        <p className={postpage.exDate}>마감일 : {`${year}년 ${
+              month + 1
+            }월 ${day}일`}</p>
+        <p className={postpage.maxApp}>모집인원 : {boardget.board.maxApp}</p>
         <p className={postpage.content}>
-          어쩌고 저쩌고 막 글 내용 있고 모집 내용 있고
-          <br />
-          쏼라 쏼라ㅂ럽럽ㄹ바럽러바ㅓㄹ바라버라바버랍
-          <br />
-          라버ㅏ버라ㅓ바ㅓ랍러ㅏ버랍버라버라버라버ㅏ버
-          <br />
-          버라버라버라버라버라버버라버라버라버라버ㅏ
+          {boardget.board.content}
         </p>
-        <p className={postpage.need}>요구조건</p>
+        <p className={postpage.need}>{boardget.board.requirement}</p>
         <div className={postpage.userslist}>
           <p className={postpage.nowlist}>신청목록이 궁금하신가요?</p>
           <Link to={`/userList`}>
