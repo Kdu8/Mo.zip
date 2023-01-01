@@ -10,7 +10,7 @@ export default function Postbox({ board }) {
   useEffect(()=>{
     axios.get("https://api.mo-zip.online/boards/"+board.id).then(res=>{
       setBoardid(res.data.id);
-      console.log(setBoardid)
+      console.log(boardid);
     })
   })
 
