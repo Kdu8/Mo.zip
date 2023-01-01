@@ -43,9 +43,11 @@ function Mypage() {
       <section className={mypage.contentbox}>
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
+          <div style={{display:"flex", flexDirection:"column"}}>
           {userboard.map((ele) => {
             return <Mywrite write={ele} />;
           })}
+          </div>
         </section>
 
         <section className={mypage.apply}>
