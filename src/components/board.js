@@ -7,13 +7,25 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
+
+const SERVER_URL = "https://api.mo-zip.online/users/me";
+
 export default function Postpage() {
   const { id } = useParams();
-  const [board, setBoard] = useState({});
-  const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
-  const [show, setShow] = useState(false);
 
+  const [user, setUser] = useState("");
+  useEffect(() => {
+    axios
+      .get(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        setUser(res.data.user.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   const [boardget, setBoardget] = useState();
   useEffect(() => {
     axios.get("https://api.mo-zip.online/boards/" + id).then((res) => {
@@ -22,10 +34,9 @@ export default function Postpage() {
     });
   }, []);
 
-  const ApplySubmit = async (e) => {
-    e.preventDefault();
+  const ApplySubmit = async () => {
     await axios
-      .post("https://api.mo-zip.online/boards/" + id + "/toggle-apply", {
+      .get("https://api.mo-zip.online/boards/" + id + "/toggle-apply", {
         withCredentials: true,
       })
       .then((res) => {
@@ -66,11 +77,9 @@ export default function Postpage() {
         </div>
       </div>
       <div className={postpage.arrowmain}>
-        <form onSubmit={ApplySubmit}>
-          <button type="submit" className={postpage.apply}>
+          <button onClick={ApplySubmit} className={postpage.apply}>
             신청하기
           </button>
-        </form>
         <Link to={`/main`}>
           <img src={arrow} alt="나가기" className={postpage.arrow} />
           <p className={postpage.gomain}>나가기</p>
