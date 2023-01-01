@@ -96,7 +96,7 @@
 .listtitle {
   font-weight: 600;
   font-size: 17px;
-  position: absolute;
+  position: relative;
   top: 37%;
   left: 4%;
 }
