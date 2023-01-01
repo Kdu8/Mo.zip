@@ -40,7 +40,7 @@ export default function Postpage() {
         withCredentials: true,
       })
       .then((res) => {
-        alert("신청되었습니다.");
+        alert("신청 상태가 바뀌었습니다.");
         navigate(`/main`);
       })
       .catch((err) => {
@@ -78,7 +78,7 @@ export default function Postpage() {
       </div>
       <div className={postpage.arrowmain}>
           <button onClick={ApplySubmit} className={postpage.apply}>
-            신청하기
+            신청/신청취소
           </button>
         <Link to={`/main`}>
           <img src={arrow} alt="나가기" className={postpage.arrow} />
