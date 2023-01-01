@@ -1,12 +1,11 @@
 import React from "react";
-import userList from "./css/userlist.module.css";
+import postpage from "./css/postpage.module.css";
 
 const userlist = ({ userlist }) => {
-  if (userList !== undefined) {
     return (
-      <div className={userList.container}>
-        <p className={userList.list}>신청자 목록</p>
-        <ul className={userList.user}>
+      <div className={postpage.usercontainer}>
+        <p className={postpage.list}>신청자 목록</p>
+        <ul className={postpage.user}>
           {userlist.map((ele) => {
             return (
               <li>
@@ -17,7 +16,6 @@ const userlist = ({ userlist }) => {
         </ul>
       </div>
     );
-  }
 };
 
 export default userlist;

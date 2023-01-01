@@ -28,7 +28,6 @@ function App() {
         <Route path="/check" element={<Check />} />
         <Route path="/board/:id" element={<Postpageview />} />
         <Route path="/mypage" element={<Mypage />} />
-        <Route path="/userlist" element={<Userlist />} />
       </Routes>
     </Router>
   );

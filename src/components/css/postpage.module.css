@@ -70,7 +70,7 @@
   left: 43%;
   width: 300px;
 }
-.content{
+.content {
   font-size: 23px;
   font-weight: 600;
   position: relative;
@@ -78,7 +78,7 @@
   left: 3%;
   white-space: pre-line;
 }
-.need{
+.need {
   font-size: 18px;
   font-weight: 600;
   position: relative;
@@ -124,4 +124,25 @@
 .arrow {
   position: relative;
   width: 20px;
+}
+.usercontainer {
+  width: 400px;
+  height: 650px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background-color: #b6c9f1;
+}
+.list {
+  position: relative;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+.user {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4%;
 }
