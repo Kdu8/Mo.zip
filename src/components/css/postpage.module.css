@@ -21,13 +21,13 @@
   top: 23%;
   left: 3%;
   border-radius: 9px;
-  position: relative;
+  position: absolute;
   background-color: #d7e3fb;
 }
 .nowlist {
   font-weight: 600;
   font-size: 18px;
-  position: relative;
+  position: absolute;
   top: 25%;
   left: 8%;
 }

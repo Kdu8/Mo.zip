@@ -8,7 +8,7 @@ const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Mypage() {
   const [user, setUser] = useState("");
-  const [userboard, setUserboard] = useState("");
+  const [userboard, setUserboard] = useState([]);
   useEffect(() => {
     axios
       .get(SERVER_URL, { withCredentials: true })
@@ -16,6 +16,7 @@ function Mypage() {
         console.log(res.data);
         setUser(res.data.user.name);
         setUserboard(res.data.myBoards);
+        console.log(userboard);
       })
       .catch((err) => {
         console.log(err);
@@ -42,9 +43,6 @@ function Mypage() {
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
           <div className={mypage.listtitle}>
-          {userboard.map((ele) => {
-            return <Userboardlist board={ele} />;
-          })}
           </div>
           <div className={mypage.navigate}>
             <span className="material-symbols-outlined" id={mypage.backarrow}>
