@@ -3,6 +3,7 @@ import Mainheader from "./mainheader";
 import { useState, useEffect } from "react";
 import Userboardlist from "./userboardlist";
 import axios from "axios";
+import Mywrite from "./mywrite";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
@@ -42,8 +43,9 @@ function Mypage() {
       <section className={mypage.contentbox}>
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
-          <div className={mypage.listtitle}>
-          </div>
+          {userboard.map((ele) => {
+            return <Mywrite write={ele} />;
+          })}
         </section>
 
         <section className={mypage.apply}>
