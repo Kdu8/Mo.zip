@@ -157,3 +157,9 @@
   top: 45px;
   left: 40px;
 }
+.titlebox{
+  width: 900px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 9px;
+}

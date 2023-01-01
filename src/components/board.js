@@ -58,7 +58,9 @@ export default function Postpage() {
       <Mainheader user={user}/>
 
       <div className={postpage.postcontainer}>
+        <div className={postpage.titlebox}>
         <p className={postpage.title}>{boardget.board.title}</p>
+        </div>
         <p className={postpage.name}>작성자: {boardget.writerName}</p>
         <p className={postpage.exDate}>
           마감일 : {`${year}년 ${month + 1}월 ${day}일`}
