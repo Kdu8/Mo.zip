@@ -87,7 +87,7 @@
   height: 11%;
   border-radius: 6px;
   display: flex;
-  position: absolute;
+  position: relative;
   top: 17%;
   left: 5%;
   margin-bottom: 4%;
@@ -96,7 +96,7 @@
 .listtitle {
   font-weight: 600;
   font-size: 17px;
-  position: relative;
+  position: absolute;
   top: 37%;
   left: 4%;
 }
