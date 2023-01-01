@@ -41,3 +41,19 @@
   .category3:hover {
     color: #7ea0e5;
   }
+  .navigate {
+    display: flex;
+    position: absolute;
+    top: 210%;
+    left: 60%;
+  }
+  .number{
+    position: absolute;
+    font-size: 20px;
+    left: 33%;
+}
+.arrowbtn{
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}

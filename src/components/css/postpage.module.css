@@ -15,34 +15,99 @@
   background-color: #b6c9f1;
   box-shadow: 0px 0px 5px 2px #00000034;
 }
-.userslist{
-width: 300px;
+.userslist {
+  width: 300px;
   height: 120px;
+  top: 23%;
+  left: 3%;
   border-radius: 9px;
   position: relative;
-  background-color: #7FA3ED;
+  background-color: #d7e3fb;
 }
-.title{
+.nowlist {
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
+  top: 25%;
+  left: 8%;
+}
+.golist {
+  position: relative;
+  font-weight: 500;
+  top: 30%;
+  left: 8%;
+  font-size: 13px;
+  color: #385cde;
+}
+.title {
   font-size: 36px;
   font-weight: 600;
+  position: relative;
+  top: 5%;
+  left: 3%;
 }
-.name{
+.name {
   font-size: 20px;
   font-weight: 600;
+  position: relative;
+  top: 8%;
+  left: 3%;
+  width: 300px;
 }
-.exDate{
+.exDate {
   font-size: 20px;
   font-weight: 600;
+  position: relative;
+  top: 3%;
+  left: 17%;
+  width: 300px;
 }
-.maxApp{
+.maxApp {
   font-size: 20px;
   font-weight: 600;
+  position: relative;
+  top: -1.5%;
+  left: 40%;
+  width: 300px;
+}
+.content{
+  font-size: 23px;
+  font-weight: 600;
+  position: relative;
+  top: 3%;
+  left: 3%;
+  white-space: pre-line;
+}
+.need{
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  top: 10%;
+  left: 3%;
+  white-space: pre-line;
+}
+.apply {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  top: -90%;
+  left: 880%;
+  background-color: #7fa3ed;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #ffffff;
+  box-shadow: 0px 0px 5px 0.3px #00000034;
+}
+.apply:hover {
+  border: 3px solid #7fa3ed;
+  background-color: white;
+  color: #7fa3ed;
+  transform: 0.4s;
 }
 
-
-
-
-.arrowmain{
+.arrowmain {
   display: flex;
   width: 150px;
   transform: translate(25%, 60%);
@@ -58,5 +123,5 @@ width: 300px;
 }
 .arrow {
   position: relative;
-  width: 25px;
+  width: 20px;
 }
