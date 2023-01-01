@@ -55,7 +55,7 @@ export default function Postpage() {
   const day = newexDate.getDate();
   return (
     <div className={postpage.body}>
-      <Mainheader />
+      <Mainheader user={user}/>
 
       <div className={postpage.postcontainer}>
         <p className={postpage.title}>{boardget.board.title}</p>
