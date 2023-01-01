@@ -73,16 +73,16 @@
 .content {
   font-size: 23px;
   font-weight: 600;
-  position: relative;
-  top: 3%;
+  position: absolute;
+  top: 30%;
   left: 3%;
   white-space: pre-line;
 }
 .need {
   font-size: 18px;
   font-weight: 600;
-  position: relative;
-  top: 10%;
+  font-size: 18px;
+  top: 79%;
   left: 3%;
   white-space: pre-line;
 }
@@ -137,9 +137,9 @@
 }
 .list {
   position: relative;
-  font-size: 26px;
-  left: 20%;
-  top: 5%;
+  font-size: 23px;
+  left: 19%;
+  top: 7.5%;
   font-weight: 600;
   color: white;
 }
@@ -153,4 +153,6 @@
   position: relative;
   font-size: 18px;
   font-weight: 500;
+  top: 45px;
+  left: 40px;
 }
