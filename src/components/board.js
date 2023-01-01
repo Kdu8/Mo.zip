@@ -5,32 +5,34 @@ import arrow from "./img/arrow.png";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const SERVER_URL = "https://api.mo-zip.online/boards/{id}";
+const SERVER_URL = "https://api.mo-zip.online/boards/";
 export default function Postpage() {
-  const replace = useNavigate();
-  const [list, setList] = useState([]);
+  const { board_id } = useParams();
+  const [board, setBoard] = useState({});
+  const [isLoaded, setIsLoaded] = useState(false);
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   useEffect(() => {
-    axios
-      .get(SERVER_URL, { withCredentials: true })
-      .then((res) => {
-        console.log(res);
-        // setList(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    const getboard = async () => {
+      const {data} =await axios.get(`/boards/${board_id}`, { withCredentials: true });
+      return data;
+    }
+    getboard().then(result => setBoard(result)).then(() => setIsLoaded(true));
   }, []);
+
   const ApplySubmit = async (e) => {
     e.preventDefault();
-    await axios.post(SERVER_URL, { withCredentials: true }).then((res) => {
-      alert("신청되었습니다.");
-      replace(`/main`);
-    }).catch(err=>{
-      alert("신청 실패");
-      replace(`/main`);
-    });
+    await axios
+      .post(SERVER_URL, { withCredentials: true })
+      .then((res) => {
+        alert("신청되었습니다.");
+        navigate(`/main`);
+      })
+      .catch((err) => {
+        alert("신청 실패");
+      });
   };
   return (
     <div className={postpage.body}>
@@ -54,10 +56,10 @@ export default function Postpage() {
         <div className={postpage.userslist}>
           <p className={postpage.nowlist}>신청목록이 궁금하신가요?</p>
           <Link to={`/userList`}>
-          <p className={postpage.golist}>
-            신청자 목록 보러가기
-            <img src={postarrow} alt="golist" className={postpage.arrow} />
-          </p>
+            <p className={postpage.golist}>
+              신청자 목록 보러가기
+              <img src={postarrow} alt="golist" className={postpage.arrow} />
+            </p>
           </Link>
         </div>
       </div>

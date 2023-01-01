@@ -6,15 +6,12 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
 
-let count = 0;
 const BOARD_URL =
-  "https://api.mo-zip.online/boards?category=Sports&size=4&sort=id,DESC&page=" + count;
+  "https://api.mo-zip.online/boards?category=Sports&size=4&sort=id,DESC&page=0";
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 function Category1page() {
-  const replace = useNavigate();
   const [boardlist, setBoardList] = useState([]);
   useEffect(() => {
     axios.get(BOARD_URL, { withCredentials: true }).then((res) => {
@@ -80,28 +77,6 @@ function Category1page() {
         {boardlist.map((ele) => {
           return <Postbox board={ele} />;
         })}
-        <div className={category1.navigate}>
-          <button
-            className={category1.arrowbtn}
-            
-          >
-            <span
-              className="material-symbols-outlined"
-              id={category1.backarrow}
-            >
-              arrow_back_ios
-            </span>
-          </button>
-          <div className={category1.number}> 1 </div>
-          <button className={category1.arrowbtn}>
-            <span
-              className="material-symbols-outlined"
-              id={category1.forwardarrow}
-            >
-              arrow_forward_ios
-            </span>
-          </button>
-        </div>
       </div>
     </div>
   );

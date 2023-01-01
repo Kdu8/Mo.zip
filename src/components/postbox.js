@@ -4,16 +4,22 @@ import PropTypes from "prop-types";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 export default function Postbox({ board }) {
+
   const navigate = useNavigate();
+
   const BOARD_URL = "https://mo-zip.online/" + board.id;
+
   console.log(BOARD_URL);
   const [boardid, setBoardid] = useState();
+
   useEffect(() => {
     axios.get(BOARD_URL, { withCredentials: true }).then((res) => {
       console.log(res.data);
     });
   }, []);
+
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
     if (board.finished) {
@@ -23,9 +29,11 @@ export default function Postbox({ board }) {
     const year = newexDate.getFullYear();
     const month = newexDate.getMonth();
     const day = newexDate.getDate();
+
     return (
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
-        <Link to={`/postpage`} className={postbox.awidth}>
+
+        <Link to={`/board/${board.id}`} className={postbox.awidth}>
           <div className={postbox.postbox}>
             <p className={postbox.headline}>{board.title}</p>
 
