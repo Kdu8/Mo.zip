@@ -195,7 +195,7 @@
 }
 .contentbox{
   width: 900px;
-  height: 400px;
+  height: 120px;
   background-color: #ffffff;
   border-radius: 9px;
   position: absolute;
@@ -203,5 +203,11 @@
   left: 2%;
 }
 .needbox{
-
+  width: 900px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  position: absolute;
+  top: 50%;
+  left: 2%;
 }
