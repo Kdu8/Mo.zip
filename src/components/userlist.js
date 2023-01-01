@@ -1,9 +1,13 @@
 import React from 'react';
 
-const userlist = () => {
+const userlist = ({userlist}) => {
     return (
-        <div>
-            userlist
+        <div className={userlist.container}>
+            <ul>
+                {userlist.map((ele)=>{
+                    return <li>{ele.name}</li>
+                })}
+            </ul>
         </div>
     );
 };

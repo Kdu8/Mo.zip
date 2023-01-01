@@ -68,7 +68,7 @@ export default function Postpage() {
         <p className={postpage.need}>{boardget.board.requirement}</p>
         <div className={postpage.userslist}>
           <p className={postpage.nowlist}>신청목록이 궁금하신가요?</p>
-          <Link to={`/userList`}>
+          <Link to={`/userList`} userlist={boardget.users}>
             <p className={postpage.golist}>
               신청자 목록 보러가기
               <img src={postarrow} alt="golist" className={postpage.arrow} />
