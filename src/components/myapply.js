@@ -1,7 +1,7 @@
 import React from 'react';
 import mypage from "./css/mypage.module.css";
 
-const Myapply = (apply) => {
+const Myapply = ({apply}) => {
    return (
             <div className={mypage.listbox}>
       <div className={mypage.listtitle}>{apply.title}</div>
