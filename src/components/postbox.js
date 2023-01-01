@@ -1,11 +1,10 @@
 import postbox from "./css/postbox.module.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Postbox({ board }) {
-
 
   if (board !== undefined && board.exDate !== undefined) {
     let moziping = "Mo.zip";
@@ -20,7 +19,7 @@ export default function Postbox({ board }) {
     return (
       <div className={board.id} style={{ width: "400px", height: "250px" }}>
 
-        <Link to={`/boards/${board.id}`} className={postbox.awidth} boardid={board.id}>
+        <Link to={`/board/${board.id}`} className={postbox.awidth}>
           <div className={postbox.postbox}>
             <p className={postbox.headline}>{board.title}</p>
 
