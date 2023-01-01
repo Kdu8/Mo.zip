@@ -8,8 +8,8 @@ const userlist = ({ userlist }) => {
         <ul className={postpage.user}>
           {userlist.map((ele) => {
             return (
-              <li>
-                {ele.name}/{ele.discord}
+              <li className={postpage.name}>
+                {ele.name}
               </li>
             );
           })}

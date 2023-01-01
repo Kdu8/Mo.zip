@@ -10,7 +10,7 @@
   height: 550px;
   border-radius: 7px;
   position: relative;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, 5%);
   background-color: #b6c9f1;
   box-shadow: 0px 0px 5px 2px #00000034;
@@ -146,8 +146,11 @@
 .user {
   position: relative;
   display: flex;
-  font-size: 18px;
-  font-weight: 500;
   flex-direction: column;
   margin-bottom: 4%;
+}
+.name {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
 }
