@@ -8,14 +8,16 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
 const SERVER_URL = "https://api.mo-zip.online/boards/";
-export default function Postpage({boardid}) {
+export default function Postpage() {
+  const {id} = useParams();
   const [board, setBoard] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    axios.get("https://api.mo-zip.online/boards/"+boardid).then(res => {
+    console.log(id);
+    axios.get("https://api.mo-zip.online/boards/"+id).then(res => {
       console.log(res.data)
     })
   }, []);
