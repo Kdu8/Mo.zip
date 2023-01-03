@@ -103,11 +103,3 @@
   position: absolute;
   transform: translate(500%, 2500%);
 }
-@media screen and (max-width:1000px){
-  .not{
-    transform: translate(500%, 2600%);
-  }
-  .join{
-    transform: translate(500%, 2600%);
-  }
-}
