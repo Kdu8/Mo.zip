@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ko } from 'date-fns/esm/locale';
+import category1 from "./css/category1.module.css";
 
 const SERVER_URL = "https://api.mo-zip.online/boards";
 const USER_URL = "https://api.mo-zip.online/users/me";
@@ -78,6 +79,15 @@ function Writepage() {
   return (
     <div className={write.main}>
       <Mainheader user={user}/>
+      <Link to={`/category1`}>
+          <button className={category1.category1}>운동</button>
+        </Link>
+        <Link to={`/category2`}>
+          <button className={category1.category2}>프로젝트</button>
+        </Link>
+        <Link to={`/category3`}>
+          <button className={category1.category3}>공동구매</button>
+        </Link>
       <div className={write.writemain}>
         <form onSubmit={onSubmitHandler}>
           <div className={write.writebody}>
