@@ -2,6 +2,7 @@ import Mainheader from "./mainheader";
 import postpage from "./css/postpage.module.css";
 import Userlist from "../components/userlist";
 import arrow from "./img/arrow.png";
+import category1 from "./css/category1.module.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -54,7 +55,15 @@ export default function Postpage() {
     return (
       <div className={postpage.body}>
         <Mainheader user={user} />
-
+        <Link to={`/category1`}>
+        <button className={category1.category1}>운동</button>
+      </Link>
+      <Link to={`/category2`}>
+        <button className={category1.category2}>프로젝트</button>
+      </Link>
+      <Link to={`/category3`}>
+        <button className={category1.category3}>공동구매</button>
+      </Link>
         <div className={postpage.postcontainer}>
           <div className={postpage.titlebox}>
             <p className={postpage.title}>{boardget.board.title}</p>
