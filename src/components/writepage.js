@@ -7,6 +7,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ko } from 'date-fns/esm/locale';
 
 const SERVER_URL = "https://api.mo-zip.online/boards";
 const USER_URL = "https://api.mo-zip.online/users/me";
@@ -111,6 +112,7 @@ function Writepage() {
               dateFormat="yyyy/MM/dd"
               className={write.enddateinput}
               name="exDate"
+              locale={ko}
             />
             <p className={write.people}>최대 인원</p>
             <input type="number" className={write.peopleinput} name="maxApp" />
