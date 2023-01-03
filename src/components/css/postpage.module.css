@@ -86,7 +86,7 @@
 .arrowmain {
   display: flex;
   width: 150px;
-  transform: translate(25%, 60%);
+  transform: translate(25%, -80%);
 }
 
 .gomain {
