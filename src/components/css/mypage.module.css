@@ -37,7 +37,7 @@
 
 .user > .inner {
   position: absolute;
-  top: 55%;
+  top: 47%;
   left: 110px;
   display: flex;
   padding-left: 30px;
@@ -60,6 +60,7 @@
   width: 80%;
   position: absolute;
   left: 9%;
+  top: 90%;
 }
 
 .title {
