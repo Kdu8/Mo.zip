@@ -56,14 +56,14 @@ export default function Postpage() {
       <div className={postpage.body}>
         <Mainheader user={user} />
         <Link to={`/category1`}>
-        <button className={category1.category1}>운동</button>
-      </Link>
-      <Link to={`/category2`}>
-        <button className={category1.category2}>프로젝트</button>
-      </Link>
-      <Link to={`/category3`}>
-        <button className={category1.category3}>공동구매</button>
-      </Link>
+          <button className={category1.category1}>운동</button>
+        </Link>
+        <Link to={`/category2`}>
+          <button className={category1.category2}>프로젝트</button>
+        </Link>
+        <Link to={`/category3`}>
+          <button className={category1.category3}>공동구매</button>
+        </Link>
         <div className={postpage.postcontainer}>
           <div className={postpage.titlebox}>
             <p className={postpage.title}>{boardget.board.title}</p>

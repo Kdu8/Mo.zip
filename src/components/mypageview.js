@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Mywrite from "./mywrite";
 import Myapply from "./myapply";
+import { Link } from "react-router-dom";
+import category1 from "./css/category1.module.css";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
@@ -36,6 +38,15 @@ function Mypage() {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
+      <Link to={`/category1`}>
+        <button className={category1.category1}>운동</button>
+      </Link>
+      <Link to={`/category2`}>
+        <button className={category1.category2}>프로젝트</button>
+      </Link>
+      <Link to={`/category3`}>
+        <button className={category1.category3}>공동구매</button>
+      </Link>
       <section className={mypage.user}>
         <div className={mypage.inner}>
           <div className={mypage.userName}>{user}</div>
@@ -45,19 +56,19 @@ function Mypage() {
       <section className={mypage.contentbox}>
         <section className={mypage.writing}>
           <div className={mypage.title}>작성글</div>
-          <div style={{display:"flex", flexDirection:"column"}}>
-          {userboard.map((ele) => {
-            return <Mywrite write={ele} />;
-          })}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {userboard.map((ele) => {
+              return <Mywrite write={ele} />;
+            })}
           </div>
         </section>
 
         <section className={mypage.apply}>
           <div className={mypage.title}>신청 목록</div>
-          <div style={{display:"flex", flexDirection:"column"}}>
-          {userapply.map((ele) => {
-            return <Myapply apply={ele} />;
-          })}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {userapply.map((ele) => {
+              return <Myapply apply={ele} />;
+            })}
           </div>
         </section>
       </section>
