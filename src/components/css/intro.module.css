@@ -23,6 +23,11 @@
   
   @media screen and (max-width:767px) {
   /* 모바일 */
+  .inner {
+    width: 100vw;
+    margin: 0 auto;
+    position: relative;
+  }
   }
 /* BTN */
 
