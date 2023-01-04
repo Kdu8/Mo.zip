@@ -17,18 +17,6 @@
   margin: 0 auto;
   position: relative;
 }
-@media screen and (max-width:1023px) {
-  /* 타블렛 */
-  }
-  
-  @media screen and (max-width:767px) {
-  /* 모바일 */
-  .inner {
-    width: 100vw;
-    margin: 0 auto;
-    position: relative;
-  }
-  }
 /* BTN */
 
 .start {
@@ -334,7 +322,7 @@ a {
 }
 
 .visual .box7 {
-  background-color: #FAFAFB;
+  background-color: #fafafb;
   height: 650px;
 }
 
