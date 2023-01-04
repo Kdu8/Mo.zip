@@ -140,3 +140,17 @@
 .contentbox .navigate .material-symbols-outlined {
   cursor: pointer;
 }
+.category1 {
+  position: relative;
+  top: -70px;
+  left: 330px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  color: #9a9898;
+}
+.category1:hover {
+  color: #7ea0e5;
+}

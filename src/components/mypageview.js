@@ -39,7 +39,7 @@ function Mypage() {
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
       <Link to={`/category1`}>
-        <button className={category1.category1}>운동</button>
+        <button className={mypage.category1}>운동</button>
       </Link>
       <Link to={`/category2`}>
         <button className={category1.category2}>프로젝트</button>
