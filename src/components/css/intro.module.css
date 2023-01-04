@@ -17,7 +17,13 @@
   margin: 0 auto;
   position: relative;
 }
-
+@media screen and (max-width:1023px) {
+  /* 타블렛 */
+  }
+  
+  @media screen and (max-width:767px) {
+  /* 모바일 */
+  }
 /* BTN */
 
 .start {
