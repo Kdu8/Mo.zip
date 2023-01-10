@@ -12,6 +12,8 @@ import { toast, ToastContainer } from "react-toastify"
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 export default function Postpage() {
+  const success = () => toast.success("신청 상태가 바뀌었습니다.");
+  const error = () => toast.error("신청 실패");
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -41,11 +43,10 @@ export default function Postpage() {
         withCredentials: true,
       })
       .then((res) => {
-        const success = () => toast.success("신청 상태가 바뀌었습니다.");
-        navigate(`/main`);
+        success();
       })
       .catch((err) => {
-        const error = () => toast.error("신청 실패");
+        error();
       });
   };
   if (boardget?.board?.exDate) {
