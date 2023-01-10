@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
@@ -42,7 +42,7 @@ export default function Postpage() {
         withCredentials: true,
       })
       .then((res) => {
-        toast.success('신청 상태가 바뀌었습니다.');
+        toast.success("신청 상태가 바뀌었습니다.");
         navigate(`/main`);
       })
       .catch((err) => {
@@ -97,6 +97,18 @@ export default function Postpage() {
           <button onClick={ApplySubmit} className={postpage.apply}>
             신청/신청취소
           </button>
+          <ToastContainer
+            position="top-right" // 알람 위치 지정
+            autoClose={3000} // 자동 off 시간
+            hideProgressBar={false} // 진행시간바 숨김
+            closeOnClick // 클릭으로 알람 닫기
+            rtl={false} // 알림 좌우 반전
+            pauseOnFocusLoss // 화면을 벗어나면 알람 정지
+            draggable // 드래그 가능
+            pauseOnHover // 마우스를 올리면 알람 정지
+            theme="light"
+            // limit={1} // 알람 개수 제한
+          />
           <Link to={`/main`}>
             <img src={arrow} alt="나가기" className={postpage.arrow} />
             <p className={postpage.gomain}>나가기</p>
