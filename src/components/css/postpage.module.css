@@ -82,6 +82,9 @@
   color: #7fa3ed;
   transform: 0.4s;
 }
+.apply:focus{
+  outline: none;
+}
 
 .arrowmain {
   display: flex;

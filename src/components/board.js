@@ -7,13 +7,10 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify"
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
 export default function Postpage() {
-  const success = () => toast.success("신청 상태가 바뀌었습니다.");
-  const error = () => toast.error("신청 실패");
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -43,10 +40,11 @@ export default function Postpage() {
         withCredentials: true,
       })
       .then((res) => {
-        success();
+        alert("신청 상태가 바뀌었습니다.");
+        navigate(`/main`);
       })
       .catch((err) => {
-        error();
+        alert("신청 실패");
       });
   };
   if (boardget?.board?.exDate) {
@@ -101,7 +99,6 @@ export default function Postpage() {
             <img src={arrow} alt="나가기" className={postpage.arrow} />
             <p className={postpage.gomain}>나가기</p>
           </Link>
-          <ToastContainer/>
         </div>
       </div>
     );
