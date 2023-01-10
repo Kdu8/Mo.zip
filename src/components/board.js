@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SERVER_URL = "https://api.mo-zip.online/users/me";
 
@@ -40,11 +42,11 @@ export default function Postpage() {
         withCredentials: true,
       })
       .then((res) => {
-        alert("신청 상태가 바뀌었습니다.");
+        toast.success('신청 상태가 바뀌었습니다.');
         navigate(`/main`);
       })
       .catch((err) => {
-        alert("신청 실패");
+        toast.error(err.message);
       });
   };
   if (boardget?.board?.exDate) {
